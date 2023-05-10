@@ -485,15 +485,14 @@
         </table>
     </div>
 
-    <p>Cette matrice se prête à l'analyse de réseaux car on peut examiner les liens entre toutes les propositions de la
-        consultation. Afin
-        d'expérimenter avec cette idée, on a examiné quelles propositions ont toutes reçu une vote affirmative. Pour
-        réaliser cette analyse expérimentale, on a créé un réseau dans lequel chaque proposition se représent comme un
-        nœud. Cette grappe de nœds mis à l'aléatoire se soumet à l'ordre en établissant des liens (des <em>edges</em>)
-        entre les propositions si des participants ont en voté pour. En reprenant l'exemple d'avant, on représenterait
-        la proposition A, celle qui parle de l'école, et la proposition B, celle qui parle des chaînes d'information,
-        avec deux nœds. Puisque il y a des participants qui ont voté pour les deux propositions, spécifiquement 24
-        participants, on mettrait donc un lien (un <em>edge</em>) entre les deux nœds.
+    <p>Cette matrice se prête à l'analyse de réseau car on peut examiner les liens entre toutes les propositions de la
+        consultation. Afin d'expérimenter avec cette idée, on a examiné quelles propositions ont toutes reçu une vote
+        affirmative. Pour réaliser cette analyse expérimentale, on a créé un réseau dans lequel chaque proposition se
+        représent comme un nœud. Cette grappe de nœds mis à l'aléatoire se soumet à l'ordre en établissant des liens
+        (des <em>edges</em>) entre les propositions si des participants ont en voté pour. En reprenant l'exemple
+        d'avant, on représenterait la proposition A, celle qui parle de l'école, et la proposition B, celle qui parle
+        des chaînes d'information, avec deux nœds. Puisque il y a des participants qui ont voté pour les deux
+        propositions, spécifiquement 24 participants, on mettrait donc un lien (un <em>edge</em>) entre les deux nœds.
     </p>
     <p>Très souvent, au moins un participant a voté pour deux propositions différentes. Par conséquent, le réseau doit
         aussi faire attention au nombre de participants qui ont voté pareil sur deux propositions. En exemple, disons
@@ -581,12 +580,32 @@
         style="width:100%">
 
     <p>
-        En interprétant les résultats de l'analyse, notre nouvelle hypothèse porte que les clusters apparaissant sur le
-        graphe montrent la méthodolgie de la consultation plus que les habitudes électorales des participants.
+        En interprétant les résultats de l'analyse expérimentale, notre nouvelle hypothèse constate que les clusters
+        apparaissant sur le graphe montrent la méthodolgie de la consultation plus que les habitudes électorales des
+        participants. Lors du déroulement de la consultation entre juin et octobre 2022, l'équipe Make.org a solicité la
+        participation d'encore plus en plus de gens et le nombre de propositions qu'ont donné les participants
+        augmentait jusqu'à 2 023. Mais pour que les participants qui y ont contribué à la fin n'aient pas eu plus de
+        propositions sur lesquelles ils pouvaient voter que les participants qui y ont contribué au début, l'équipe de
+        Make.org a limité le nombre de propositions que chaque participant pourrait voir. Du coup, l'analyse de réseau,
+        sans se disposant des dates des propositions, risque à montrer tout simplement le regroupement des propositions
+        par rapport à quand ils étaient données aux participants. Dit autrement, un cluster des propositions qui sont
+        liés par le fait qu'un grand nombre de participants ont en voté pour les toutes risque à montrer un regroupement
+        des propositions qui ont étaient données à un regroupement de participants lors de la consultation. Sans avoir
+        les dates des votes ou des propositions, il n'est pas possible de bien intérpreter les clusters qui se forment
+        par l'analyse de réseau.
     </p>
 
     <h2>Accord entre propositions par l'âge de l'auteur de la proposition
     </h2>
+
+    <p>Afin de mieux explorer cette deuxième hypothèse, suite aux résultats problématiques de la première analyse, on a
+        examiné le même réseau à travers de l'âge de l'auteur de la proposition, au lieu du topic inféré de la
+        proposition. Tandis que l'analyse de réseau par topic n'a pas de cohérence dans aucun cluster, l'analyse par âge
+        montre un cluster ou les auteurs des propositions étaient plus jeunes par rapport aux autres clusters. Mais,
+        encore, ce résultat pourrait se sort de la méthodologie de la consultation et ne dit pas de grande chose sur
+        comment les participants ont voté. Il est possible qu'un groupe de participants solicités lors de la
+        consultation était plus jeunes par rapport aux autres groupes solicités.
+    </p>
 
     <div>
         <table>
@@ -608,6 +627,23 @@
     <img src="graph_visualisations/agreement_clusters_by_age.png"
         alt="Clusters of propositions which recieved affirmative votes, colored by the age of the proposition's author."
         style="width:100%">
+
+    <h1>Conclusion</h1>
+
+    <p>En conclusion, l'analyse de <em>topic modeling</em> a fait relever en détail les sujets invoqués dans toutes les
+        propositions valides de la consultation, ce qui fait 1 723. La décomposition des sujets suggère leur importance
+        dans l'imaginaire des français. De loin, les quatres sujets les plus importants par rapport à la question de
+        comment mieux s'informer, selon la consultation de Make.org et l'analyse du médialab, portent sur l'opinion dans
+        le journalisme, le financement des médias, la désinformation, et l'éducation en secondaire. Les analyses de la
+        similarité entre les sujets relève des liens entre des sujets qu'ont invoqués les propositions. En outre, la
+        décomposition d'un regroupment des sujets liés, tel que les trois sur l'éducation, montre également l'importance
+        que tient chacun. En comparaison de l'analyse de <em>topic modeling</em>, l'analyse de réseau n'a pas livré des
+        résulats qui font autorité. Pour continuer ces travaux, on propose d'enrichir les donnes de l'analyse de réseau
+        avec les dates du début et de la fin de la présentation de la proposition aux participants votants. À la fin de
+        nos analyses, notre nouvelle hypothèse est que la manque de cette donnée temporelle empêche le pouvoir de bien
+        interpréter les résultats d'une analyse de réseau sans confondre les clusters qui représentent un regroupement
+        par vote et ceux qui représentent un regroupement par le moment de participation à la consultation.
+    </p>
 
     <div>
         <p id="footnote-1">[1] Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y. Romary, L. de la Clergerie,
