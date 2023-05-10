@@ -44,7 +44,7 @@
         une analyse linguistique de type <em>topic modeling</em>, dans laquelle on extrait des sujets (topics) au sein
         d'un
         corpus de textes. La méthode que nous avons préféré employer est <a
-            href="https://maartengr.github.io/BERTopic/index.html">BERTopic</a>
+            href="https://maartengr.github.io/BERTopic/index.html"><kbd>BERTopic</kbd></a>
         .</p>
 
     <h2>Idées inférées par la consultation de Make.org</h2>
@@ -85,10 +85,10 @@
             href="https://huggingface.co/dangvantuan/sentence-camembert-large"><em>sentence
                 transformer</em></a> fine-tuné par le laboratoire français
         <a href="https://www.lajavaness.com/">La Javaness</a> et basé sur le modèle linguistique français
-        [CamemBERT](https://huggingface.co/camembert/camembert-large). Le modèle CamemBERT est le principal modèle
-        existant pour le français contemporain et a été développé par [Louis Martin, Benjamin Muller, Pedro Ortiz
-        Suarez, Yoann Dupont, Laurent Romary, Éric Villemonte de la Clergerie, Djamé Seddah et Benoît
-        Sagot](https://camembert-model.fr/). Afin de s'adapter à toutes les nuances d'une phrase, le <em>sentence
+        <a href="https://huggingface.co/camembert/camembert-large">CamemBERT</a>. Le modèle CamemBERT est le principal
+        modèle
+        existant pour le français contemporain<a id="footnote-1-ref" href="#footnote-1">[2]</a>. Afin de s'adapter à
+        toutes les nuances d'une phrase, le <em>sentence
             embedding</em> a forcement beaucoup de dimensions, pourtant il y en a trop pour qu'un algorithme puisse bien
         analyser la représentation. Nous avons donc réduit la complexité de la représentation en utilisant l'algorithme
         UMAP (<em>Uniform Manifold Approximation and Projection for Dimension Reduction</em>). Ensuite, les
@@ -363,7 +363,7 @@
         social.
         Berriche a trouvé que quand les participants étaient dans une espace privée ou quand ils se disposaient de
         l'anonymité, ils ont plus souvent partagé de la désinformation, surtout s'il leur permettrait de « renforcer
-        leur socialbilité »<a id="footnote-1-ref" href="#footnote-1">[1]</a>.
+        leur socialbilité »<a id="footnote-2-ref" href="#footnote-2">[2]</a>.
     </p>
 
     <h2>Analyse de la proximité entre topics
@@ -548,9 +548,7 @@
         </table>
     </div>
 
-    <!-- <img src="topic_visualisations/agreement_clusters_with_topic_color.png" alt=""> -->
-
-    <object type="text/html" data="topic_visualisations/agreement_clusters_with_topic_color.png"></object>
+    <img source="topic_visualisations/agreement_clusters_with_topic_color.png" alt="">
 
     <h2>Accord entre propositions par l'âge de l'auteur de la proposition
     </h2>
@@ -572,10 +570,15 @@
         </table>
     </div>
 
-    <object type="text/html" data="topic_visualisations/agreement_clusters_with_age_color.html"></object>
+    <img source="topic_visualisations/agreement_clusters_with_age_color.png" alt="">
 
-    <p id="footnote-1">[1] Berriche, M. (Forthcoming). Back to school. Do teenagers receive and share (false)
-        information in all situations? <em>Les enjeux de l'information ou de la communication</em>.</p>
+    <div>
+        <p id="footnote-1">[1] Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y. Romary, L. de la Clergerie,
+            E., Seddah, D., Sagot, B. CamemBERT: a Tasty French Language Model. <em>Proceedings of the 58th Annual
+                Meeting of the Association for Computational Linguistics</em> 2020.</p>
+        <p id="footnote-2">[2] Berriche, M. (Forthcoming). Back to school. Do teenagers receive and share (false)
+            information in all situations? <em>Les enjeux de l'information ou de la communication</em>.</p>
+    </div>
 
 </body>
 
