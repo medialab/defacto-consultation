@@ -418,7 +418,7 @@
 
     <p>La deuxième question de recherche s'appuie sur les votes qu'ont reçu les propositions. Les données brutes de
         l'analyse de Make.org se composent d'une part les propositions et d'une autre part une matrice des votes sur les
-        propositions. Le dernier met en binôme chaque proposition avec une autre proposition et montre comment les
+        propositions. La dernière met en binôme chaque proposition avec une autre proposition en montrant comment les
         participants ont voté pour les deux.
     </p>
 
@@ -429,7 +429,7 @@
         Il peut être d'accord avec la première mais neutre sur la deuxième. Il peut voter contre la première sur l'école
         primaire et voter pour la deuxième. Enfin, le participant peut ne pas avoir un avis sur la première proposition
         et être d'accord avec la deuxième. La matrice qu'a construite l'équipe de Make.org compte, pour chaque
-        proposition, le nombre des votes qui se trouvent dans chacun de ces cinq catégories.
+        proposition, le nombre de votes qui se trouvent dans chacun de ces cinq catégories possibles.
     </p>
 
     <div>
@@ -484,6 +484,34 @@
             </tr>
         </table>
     </div>
+
+    <p>Cette matrice se prête à l'analyse de réseaux car on peut examiner les liens entre toutes les propositions de la
+        consultation. Afin
+        d'expérimenter avec cette idée, on a examiné quelles propositions ont toutes reçu une vote affirmative. Pour
+        réaliser cette analyse expérimentale, on a créé un réseau dans lequel chaque proposition se représent comme un
+        nœud. Cette grappe de nœds mis à l'aléatoire se soumet à l'ordre en établissant des liens (des <em>edges</em>)
+        entre les propositions si des participants ont en voté pour. En reprenant l'exemple d'avant, on représenterait
+        la proposition A, celle qui parle de l'école, et la proposition B, celle qui parle des chaînes d'information,
+        avec deux nœds. Puisque il y a des participants qui ont voté pour les deux propositions, spécifiquement 24
+        participants, on mettrait donc un lien (un <em>edge</em>) entre les deux nœds.
+    </p>
+    <p>Très souvent, au moins un participant a voté pour deux propositions différentes. Par conséquent, le réseau doit
+        aussi faire attention au nombre de participants qui ont voté pareil sur deux propositions. En exemple, disons
+        qu'un seul participant a voté pour la proposition A, ce qui parle de l'école, et aussi pour une proposition C
+        qui parle du financement. Il faut reconnaître la distinction entre la relation A-B et la relation A-C, où la
+        première relation se rassemblait 24 participants qui ont voté pour les deux propositions concernées et la
+        dernière relation qui se rassemblait qu'un seul participant. Donc, en plus d'établir les liens (<em>edges</em>)
+        entre des propositions, on a donné à chaque lien un degré d'importance ou un <em>weight</em>. Cette dernière
+        étape permet aux alogrithmes de privilégier certains liens entre nœds, ce qui produit des clusters dans le
+        graphe.
+    </p>
+    <p>Notre hypothèse avec cette analyse de réseau était que certains sujets ou topics invoqués dans les propositions
+        se rassembleraient l'accord des participants. Par exemple, on imaginait qu'un participant qui votait pour une
+        proposition qui parlait de l'opinion et le journalisme voterait aussi en faveur d'une proposition sur l'éthique
+        du journalisme. Les résultats de l'analyse expérimentale n'ont pas confirmé cette hypothèse. Au contraire, ils
+        montrent que chaque cluster de participants qui ont voté d'une manière similaire pour les propositions se
+        compose d'un mélange héterogène des sujets invoqués.
+    </p>
 
     <h2>Accord entre propositions par topic de la proposition</h2>
 
@@ -548,9 +576,14 @@
         </table>
     </div>
 
-    <img src="topic_visualisations/agreement_clusters_with_topic_color.png"
+    <img src="graph_visualisations/agreement_clusters_by_topic.png"
         alt="Clusters of propositions which recieved affirmative votes, colored by the proposition's topic."
         style="width:100%">
+
+    <p>
+        En interprétant les résultats de l'analyse, notre nouvelle hypothèse porte que les clusters apparaissant sur le
+        graphe montrent la méthodolgie de la consultation plus que les habitudes électorales des participants.
+    </p>
 
     <h2>Accord entre propositions par l'âge de l'auteur de la proposition
     </h2>
@@ -572,14 +605,14 @@
         </table>
     </div>
 
-    <img src="topic_visualisations/agreement_clusters_with_age_color.png"
+    <img src="graph_visualisations/agreement_clusters_by_age.png"
         alt="Clusters of propositions which recieved affirmative votes, colored by the age of the proposition's author."
         style="width:100%">
 
     <div>
         <p id="footnote-1">[1] Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y. Romary, L. de la Clergerie,
-            E., Seddah, D., Sagot, B. CamemBERT: a Tasty French Language Model. <em>Proceedings of the 58th Annual
-                Meeting of the Association for Computational Linguistics</em> 2020.</p>
+            E., Seddah, D., Sagot, B. (2020) CamemBERT: a Tasty French Language Model. <em>Proceedings of the 58th
+                Annual Meeting of the Association for Computational Linguistics</em>.</p>
         <p id="footnote-2">[2] Berriche, M. (Forthcoming). Back to school. Do teenagers receive and share (false)
             information in all situations? <em>Les enjeux de l'information ou de la communication</em>.</p>
     </div>
