@@ -7,8 +7,9 @@
 
     <h3>Contexte de la consultation Make.org</h3>
     <p>Dans le cadre du projet De Facto et a l'initiative du CLEMI, de Sciences Po, de l'AFP, et de XWiki SAS,
-        l'organisation Make.org a été solicitée pour réaliser [une consultation
-        citoyenne](https://make.org/FR/consultation/mieux-sinformer/results) autour de la question de comment les
+        l'organisation Make.org a été solicitée pour réaliser <a
+            href="https://make.org/FR/consultation/mieux-sinformer/results">une consultation
+            citoyenne</a> autour de la question de comment les
         français peuvent mieux s'informer. L'objectif de la consultation était de connaître quelles solutions et quels
         défis les français imaginent face à l'essor de la désinformation en ligne. 113 227 participants ont ainsi
         participé à la consultation entre le 27 juin 2022 et le 31 octobre 2022. 2 023 propositions ont ainsi été
@@ -42,8 +43,9 @@
         formulées et votées par les participants à la consultation. Pour répondre à cette question, nous avons réalisé
         une analyse linguistique de type <em>topic modeling</em>, dans laquelle on extrait des sujets (topics) au sein
         d'un
-        corpus de textes. La méthode que nous avons préféré employer est
-        [`BERTopic`](https://maartengr.github.io/BERTopic/index.html).</p>
+        corpus de textes. La méthode que nous avons préféré employer est <a
+            href="https://maartengr.github.io/BERTopic/index.html">BERTopic</a>
+        .</p>
 
     <h2>Idées inférées par la consultation de Make.org</h2>
     <p>Parmi les propositions favorables séléctionnées par l'équipe de Make.org, leur analyse a inféré 15 idées résumant
@@ -73,7 +75,8 @@
         numérique,
         auquel on peut soumettre des algorithmes. Il existe différentes méthodes pour transformer ou "représenter" une
         phrase en vecteur ; on peut découper la phrase et représenter chaque mot en nombres, ou on peut garder le
-        contexte des mots en représentant chaque phrase en nombres. Cette dernière technique, _sentence embedding_, est
+        contexte des mots en représentant chaque phrase en nombres. Cette dernière technique, <em>sentence
+            embedding</em>, est
         plus reconnue actuellement et est celle que nous avons préférée. Chaque phrase, quelle que soit sa longeur, se
         compose du même nombre de "dimensions" au travers desquelles se caractérisent les aspects uniques de la phrase.
         Les <em>embeddings</em> nous permettent de prendre en compte le contexte des mots invoqués dans une phrase.</p>
@@ -85,18 +88,22 @@
         [CamemBERT](https://huggingface.co/camembert/camembert-large). Le modèle CamemBERT est le principal modèle
         existant pour le français contemporain et a été développé par [Louis Martin, Benjamin Muller, Pedro Ortiz
         Suarez, Yoann Dupont, Laurent Romary, Éric Villemonte de la Clergerie, Djamé Seddah et Benoît
-        Sagot](https://camembert-model.fr/). Afin de s'adapter à toutes les nuances d'une phrase, le _sentence
-        embedding_ a forcement beaucoup de dimensions, pourtant il y en a trop pour qu'un algorithme puisse bien
+        Sagot](https://camembert-model.fr/). Afin de s'adapter à toutes les nuances d'une phrase, le <em>sentence
+            embedding</em> a forcement beaucoup de dimensions, pourtant il y en a trop pour qu'un algorithme puisse bien
         analyser la représentation. Nous avons donc réduit la complexité de la représentation en utilisant l'algorithme
-        UMAP (_Uniform Manifold Approximation and Projection for Dimension Reduction_). Ensuite, les _embeddings_ des
-        phrases ont été regroupés par l'algorithme HDBSCAN (_Hierarchical Density-Based Spatial Clustering of
-        Applications with Noise_).
+        UMAP (<em>Uniform Manifold Approximation and Projection for Dimension Reduction</em>). Ensuite, les
+        <em>embeddings</em> des
+        phrases ont été regroupés par l'algorithme HDBSCAN (<em>Hierarchical Density-Based Spatial Clustering of
+            Applications with Noise</em>).
     </p>
 
     <p>Là dernière étape de notre approche consistait à donner un nom aux clusters de phrases créés par l'algorithme
-        HBDSCAN. Pour créér les représentations des topics, nous avons utilisé un autre _transformer_ que le _sentence
-        transformer_ : le c-TF-IDF (_Class-based term frequency-inverse document frequency_), qui se base sur le
-        _TfidfTransformer_ de scikit-learn. Pour terminer, nous avons relu les topics à la main, fusionné certains entre
+        HBDSCAN. Pour créér les représentations des topics, nous avons utilisé un autre <em>transformer</em> que le
+        <em>sentence
+            transformer</em> : le c-TF-IDF (<em>Class-based term frequency-inverse document frequency</em>), qui se base
+        sur le
+        <em>TfidfTransformer</em> de scikit-learn. Pour terminer, nous avons relu les topics à la main, fusionné
+        certains entre
         eux, puis donné à chacun un nom compréhensif.
     </p>
 
@@ -127,7 +134,7 @@
             <tr>
                 <td>Il faut organiser la mise en débat publique des idées sur des temps assez longs pour permettre aux
                     contradicteurs d'argumenter leur position.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">2. Financement et indépendance des médias</th>
                 <td rowspan="3">210</td>
@@ -143,7 +150,7 @@
             <tr>
                 <td>Il faut que les médias français ne soit plus possédé par 8 milliardaires qui protègent leurs
                     intérêts.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">3. Désinformation</th>
                 <td rowspan="3">178</td>
@@ -156,7 +163,7 @@
             </tr>
             <tr>
                 <td>Il faut des experts en désamorçage de fake news, reconnus et crédibles.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">4. Formation au secondaire</th>
                 <td rowspan="3">152</td>
@@ -171,7 +178,7 @@
             <tr>
                 <td>Il faut créer une discipline d'information-documentation dispensée par les professeurs
                     documentalistes pour tous les élèves du secondaire.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">5. Formation au primaire</th>
                 <td rowspan="3">85</td>
@@ -184,7 +191,7 @@
             <tr>
                 <td>Il faut développer et renforcer les compétences psycho-sociales dès l'école maternelle, et ce,
                     jusqu'à l'âge adulte.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">6. Accès à l'information</th>
                 <td rowspan="3">51</td>
@@ -199,7 +206,7 @@
             <tr>
                 <td>Il faut permettre un abonnement en ligne à un panel de titres de presse d'information avec une
                     ristourne pour les étudiants, chômeurs etc.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">7. Chaînes d'information en continu</th>
                 <td rowspan="3">47</td>
@@ -214,7 +221,7 @@
             <tr>
                 <td>Il faut que les chaînes d’information en continu soient supprimées pour arrêter la pratique du vide.
                 </td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">8. Législation</th>
                 <td rowspan="3">46</td>
@@ -228,7 +235,7 @@
             <tr>
                 <td>Il faut punir financièrement et fortement les auteurs de fausses info ainsi que les médias,
                     supports, plateformes etc.... qui les diffusent.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">9. Éthique du journalisme</th>
                 <td rowspan="3">45</td>
@@ -244,7 +251,7 @@
             <tr>
                 <td>Il faut transformer le « Conseil de déontologie des médias » créé en 2019 en véritable
                     contre-pouvoir citoyen.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">10. Désanonymisation en ligne</th>
                 <td rowspan="3">24</td>
@@ -257,7 +264,7 @@
             </tr>
             <tr>
                 <td>Il faut interdire les réseaux sociaux ou obliger de donner sa véritable identité pour poster.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">11. Arnaques et influenceurs</th>
                 <td rowspan="3">20</td>
@@ -273,7 +280,7 @@
             <tr>
                 <td>Il faut ne plus autoriser de publicité après des informations dramatiques, au moins par respect pour
                     les victimes et leurs familles.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">12. Échelles des médias</th>
                 <td rowspan="3">17</td>
@@ -289,7 +296,7 @@
             <tr>
                 <td>Il faut laisser aux chaines régionales et à la PQR le traitement de l'info du village et traiter
                     plus souvent de l'international.</td>
-                </trd>
+                </td>
             <tr>
                 <th rowspan="3">13. Enseignment et EMI (Éducation aux médias et à l'information)</th>
                 <td rowspan="3">16</td>
@@ -305,7 +312,7 @@
             <tr>
                 <td>Il faut inscrire l'EMI dans l'emploi du temps des élèves de la 6e à la Terminale gérée par les profs
                     docs dont c'est le domaine d'expertise.</td>
-                </trd>
+                </td>
         </table>
 
     </div>
@@ -330,7 +337,8 @@
         sociaux ». Pour faire le compairison, le regroupement qu'on a appelé « Formation au primaire » est bien plus
         optimiste. Par rapport au topic de l'éducation aux écoles secondaires, qui parlent des réseaux sociaux, des
         algorithmes, et du « fake news », le topic de l'éducuation aux écoles primaires parlent du développement, de
-        l'âge, de l'esprit, et pas beaucoup sur les outils numériques qui diffusent le _fake news_ ni sur le _fake news_
+        l'âge, de l'esprit, et pas beaucoup sur les outils numériques qui diffusent le <em>fake news</em> ni sur le
+        <em>fake news</em>
         lui-même. En d'autre termes, les deux topics inférés se distinquent par de l'un côté un focus sur la diffusion
         de la désinformation vers les jeunes par les réseaux sociaux et de l'autre côté le développement de l'esprit
         critique dès un jeune âge.
@@ -349,8 +357,10 @@
         médialab, Manon Berriche a méné une enquête dans un collège pour examiner comment les adolescents recoivent et
         interprètent la désinformation en ligne. Elle a trouvé que les adolescents savent prêter attention au caractère
         d'une information en ligne et à sa factualité. Dans le cadre de l'enquête, Berriche a vu les jeunes participants
-        réuissent souvent à l'identification de _fake news_. Par contre, souvent quand les adolescents tombent sur du
-        _fake news_ ou des rumeurs, leur décision d'en mettre en circulation ou pas dépend sur le contexte social.
+        réuissent souvent à l'identification de <em>fake news</em>. Par contre, souvent quand les adolescents tombent
+        sur du
+        <em>fake news</em> ou des rumeurs, leur décision d'en mettre en circulation ou pas dépend sur le contexte
+        social.
         Berriche a trouvé que quand les participants étaient dans une espace privée ou quand ils se disposaient de
         l'anonymité, ils ont plus souvent partagé de la désinformation, surtout s'il leur permettrait de « renforcer
         leur socialbilité »<a id="footnote-1-ref" href="#footnote-1">[1]</a>.
@@ -360,21 +370,24 @@
     </h2>
 
     <p>Certains sujets invoqués dans les propositions sont liés à l'un et l'autre, tels que les deux qui discutent
-        l'éducation des jeunes et celui qui discute l'enseignement. Un regroupement hiérarchique (_hierarchical
-        clustering analysis_ ou HCA) montre la proximité entre les représentations des topics inférés par les
+        l'éducation des jeunes et celui qui discute l'enseignement. Un regroupement hiérarchique (<em>hierarchical
+            clustering analysis</em> ou HCA) montre la proximité entre les représentations des topics inférés par les
         algorithmes. On a implementé la méthode Ward pour relever la proximité entre topics.
     </p>
 
     <img src="topic_visualisations/hierarchy.png" alt="Hierarchical Clustering of 13 topics.">
 
     <p>Comme attendu, le regroupement hiérarchique relève une proximité entre les trois sujets qui appartienent aux
-        discussions de l'éducation : `Enseignement & L'EMI`, `Formation au secondaire`, `Formation au primaire`. Plus
+        discussions de l'éducation : <kbd>Enseignement & L'EMI</kbd>, <kbd>Formation au secondaire</kbd>, <kbd>Formation
+            au primaire</kbd>. Plus
         intéressante est la proximité que montre le regroupement hiérarchique entre la discussion de la désinformation
-        (`Désinformation`) et la discussion de l'opinion dans le journalisme (`L'opinion & le journalisme`). En outre,
-        la discussion sur la législation (`Legislation`) se lie à deux des sujets en particulier. Dans un premier temps,
+        (<kbd>Désinformation</kbd>) et la discussion de l'opinion dans le journalisme (<kbd>L'opinion & le
+            journalisme</kbd>). En outre,
+        la discussion sur la législation (<kbd>Legislation</kbd>) se lie à deux des sujets en particulier. Dans un
+        premier temps,
         le regroupement hiérarchique trouve que la législation est liée aux soucis sur les arnaques et les influenceurs
-        en ligne (`Arnaques & influenceurs`). Dans un deuxième temps, elle se lie aussi à la question de la
-        désanoymisation en ligne (`Désanoymisation en ligne`).
+        en ligne (<kbd>Arnaques & influenceurs</kbd>). Dans un deuxième temps, elle se lie aussi à la question de la
+        désanoymisation en ligne (<kbd>Désanoymisation en ligne</kbd>).
     </p>
 
     <h2>Analyse de la similarité entre topics</h2>
@@ -387,13 +400,16 @@
 
     <img src="topic_visualisations/heatmap.png" alt="Heat map showing the cosine similarity between topics.">
 
-    <p>L'idée de législation (`Legislation`), par exemple, se tient le plus aux propositions qui discutent l'éducation
-        dans les écoles secondaires (`Formation au secondaire`). D'un dégré moins important, la législation
-        (`Legislation`) est aussi liée aux discussions sur l'accès à l'information (`Accès à l'information`).
+    <p>L'idée de législation (<kbd>Legislation</kbd>), par exemple, se tient le plus aux propositions qui discutent
+        l'éducation
+        dans les écoles secondaires (<kbd>Formation au secondaire</kbd>). D'un dégré moins important, la législation
+        (<kbd>Legislation</kbd>) est aussi liée aux discussions sur l'accès à l'information (<kbd>Accès à
+            l'information</kbd>).
         Contrairement au regroupement hierarchique, l'analyse par la similarité cosinus suggère que la similarité entre
         les trois topics sur l'éducation n'est pas si forte. Selon cette dernière analyse, trois topics en particulier,
-        l'éducation dans les écoles secondaires (`Formation au secondaire`), l'accès à l'information (`Accès à
-        l'information`), et la législation (`Legislation`), ont les relations entre eux les plus importantes.
+        l'éducation dans les écoles secondaires (<kbd>Formation au secondaire</kbd>), l'accès à l'information
+        (<kbd>Accès à l'information</kbd>), et la législation (<kbd>Legislation</kbd>), ont les relations entre eux les
+        plus importantes.
     </p>
 
     <h1>Question de recherche 2 : Analyse de la vote sur les propositions</h1>
