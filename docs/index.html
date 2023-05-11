@@ -44,8 +44,7 @@
         une analyse linguistique de type <em>topic modeling</em>, dans laquelle on extrait des sujets (topics) au sein
         d'un
         corpus de textes. La méthode que nous avons préféré employer est <a
-            href="https://maartengr.github.io/BERTopic/index.html"><kbd>BERTopic</kbd></a>
-        .</p>
+            href="https://maartengr.github.io/BERTopic/index.html"><kbd>BERTopic</kbd></a>.</p>
 
     <h2>Idées inférées par la consultation de Make.org</h2>
     <p>Parmi les propositions favorables séléctionnées par l'équipe de Make.org, leur analyse a inféré 15 idées résumant
@@ -79,7 +78,7 @@
             embedding</em>, est
         plus reconnue actuellement et est celle que nous avons préférée. Chaque phrase, quelle que soit sa longeur, se
         compose du même nombre de "dimensions" au travers desquelles se caractérisent les aspects uniques de la phrase.
-        Les <em>embeddings</em> nous permettent de prendre en compte le contexte des mots invoqués dans une phrase.</p>
+        Les <em>embeddings</em> nous permettent de prendre en compte le contexte des mots employés dans une phrase.</p>
 
     <p>Afin de créer les <em>sentence embeddings</em>, nous avons exploité un <a
             href="https://huggingface.co/dangvantuan/sentence-camembert-large"><em>sentence
@@ -88,8 +87,7 @@
         <a href="https://huggingface.co/camembert/camembert-large">CamemBERT</a>. Le modèle CamemBERT est le principal
         modèle
         existant pour le français contemporain<a id="footnote-1-ref" href="#footnote-1"><sup>1</sup></a>. Afin de
-        s'adapter à
-        toutes les nuances d'une phrase, le <em>sentence
+        s'adapter à toutes les nuances d'une phrase, le <em>sentence
             embedding</em> a forcement beaucoup de dimensions, pourtant il y en a trop pour qu'un algorithme puisse bien
         analyser la représentation. Nous avons donc réduit la complexité de la représentation en utilisant l'algorithme
         UMAP (<em>Uniform Manifold Approximation and Projection for Dimension Reduction</em>). Ensuite, les
@@ -98,14 +96,13 @@
             Applications with Noise</em>).
     </p>
 
-    <p>Là dernière étape de notre approche consistait à donner un nom aux clusters de phrases créés par l'algorithme
-        HBDSCAN. Pour créér les représentations des topics, nous avons utilisé un autre <em>transformer</em> que le
+    <p>La dernière étape de notre approche consistait à donner un nom aux clusters de phrases créés par l'algorithme
+        HBDSCAN. Pour créer les représentations des topics, nous avons utilisé un autre <em>transformer</em> que le
         <em>sentence
             transformer</em> : le c-TF-IDF (<em>Class-based term frequency-inverse document frequency</em>), qui se base
         sur le
         <em>TfidfTransformer</em> de scikit-learn. Pour terminer, nous avons relu les topics à la main, fusionné
-        certains entre
-        eux, puis donné à chacun un nom compréhensif.
+        certains entre eux, puis donné à chacun un nom compréhensif.
     </p>
 
     <img src="topic_visualisations/barchart.png" atl="Bar charts of 13 topics, showing the most representative tokens."
@@ -319,59 +316,58 @@
 
     </div>
 
-    <p>569 propositions ne se rattachent pas suffisamment à aucun des topics inférés.
-    </p>
+    <p>569 propositions ne se rattachent à aucun des topics inférés.</p>
 
     <h2>Analyse de la distribution des topics</h2>
 
     <p>Les algorithmes ont détecté et distingué trois sujets liés à l'éducation. Premièrement, au moins 16 propositions
-        ont invoqué la profession de l'enseignement et l'EMI (Éducation aux médias et à l'information) en particulier.
-        Deuxièmement, au moins 85 propositions ont invoqué l'education en maternelle. Troisièmement, au moins 152
-        propositions ont discuté l'éducation des jeunes en général et spécifiquement en secondaire. Au lieu de dire
-        simplement que l'éducation s'inquiètent les participants pendant qu'ils répondent à la question de comment mieux
-        s'informer, on peut dire que leurs soucis se concentrent surtout aux habitudes et aux compétences critiques des
-        jeunes en secondaire, qui ne faisaient pas partie de la consultation dont l'âge moyen des participants était
-        environ 50 ans.
+        ont évoqué la profession de l'enseignement et l'EMI (Éducation aux médias et à l'information) en particulier.
+        Deuxièmement, au moins 85 propositions concernent l'education en maternelle. Troisièmement, au moins 152
+        propositions ont traité de l'éducation des jeunes en général et plus spécifiquement en secondaire. Au lieu de dire
+        simplement que l'éducation est une préoccupation des participants lorsqu'ils sont interrogés sur "comment mieux
+        s'informer", on peut dire que leurs intérêts se concentrent surtout sur les habitudes et les compétences critiques des
+        jeunes en secondaire, lesquels n'étaient pas directement consultés puisque l'âge moyen des participants était
+        d'environ 50 ans.
     </p>
 
     <p>Le regroupement des propositions qu'on a appelé « Formation au secondaire » inclut des propositions qui ciblent
         explicitement l'éducation en secondaire et des propositions qui utilisent souvent les mots « fake » et « réseaux
-        sociaux ». Pour faire le compairison, le regroupement qu'on a appelé « Formation au primaire » est bien plus
+        sociaux ». Pour faire une comparaison, le regroupement qu'on a appelé « Formation au primaire » est bien plus
         optimiste. Par rapport au topic de l'éducation aux écoles secondaires, qui parlent des réseaux sociaux, des
-        algorithmes, et du « fake news », le topic de l'éducuation aux écoles primaires parlent du développement, de
-        l'âge, de l'esprit, et pas beaucoup sur les outils numériques qui diffusent le <em>fake news</em> ni sur le
+        algorithmes, et du « fake news », le topic de l'éducation aux écoles primaires parle du développement, de
+        l'âge, de l'esprit, et peu des outils numériques qui diffusent les <em>fake news</em> ni des
         <em>fake news</em>
-        lui-même. En d'autre termes, les deux topics inférés se distinquent par de l'un côté un focus sur la diffusion
-        de la désinformation vers les jeunes par les réseaux sociaux et de l'autre côté le développement de l'esprit
+        elles-mêmes. En d'autre termes, les deux topics inférés se distinquent d'un côté par un focus sur la diffusion
+        de la désinformation envers les jeunes sur les réseaux sociaux, et de l'autre par le développement de l'esprit
         critique dès un jeune âge.
     </p>
 
-    <p>Donné la déséquilibre entre la proportion de propositions concernées par l'éducation dans les écoles secondaires
-        et celle dans les écoles primaries, il semble que les participants ont pensé bien plus fortement aux adolescents
-        qu'aux enfants en se posant des questions sur la désinformation en ligne. De l'un côté, il se peut que ce biais
-        relève une supposition répandue chez les participants que les adolescents sont, en général, plus en ligne que
+    <p>Étant donné le déséquilibre entre la proportion de propositions concernant l'éducation dans les écoles secondaires
+        et les écoles primaires, il semble que les participants ont pensé bien plus fortement aux adolescents
+        qu'aux enfants en se posant des questions sur la désinformation en ligne. D'un côté, il se peut que ce biais
+        révèle une supposition répandue chez les participants que les adolescents sont, en général, plus en ligne que
         les enfants et donc plus exposés à la désinformation, et cette supposition a l'air d'être correcte.
     </p>
 
-    <p>De l'autre côté, il se peut que le biais chez les participants relève une deuxième supposition que les
-        adolescents sont spécialement susceptibles à la désinformation en ligne par rapport à la population en général.
-        Cette supposition, pourtant, n'est pas bien justifiée. Chercheuse sur le projet De Facto et doctorante au
+    <p>De l'autre côté, il se peut qu'un autre biais chez les participants ait influé : que les adolescents soient
+        particulièrement susceptibles à la désinformation en ligne par rapport à la population en général.
+        Ce présupposé ne semble pourtant pas bien justifié. Chercheuse sur le projet De Facto et doctorante au
         médialab, Manon Berriche a méné une enquête dans un collège pour examiner comment les adolescents recoivent et
-        interprètent la désinformation en ligne. Elle a trouvé que les adolescents savent prêter attention au caractère
-        d'une information en ligne et à sa factualité. Dans le cadre de l'enquête, Berriche a vu les jeunes participants
-        réuissent souvent à l'identification de <em>fake news</em>. Par contre, souvent quand les adolescents tombent
-        sur du
-        <em>fake news</em> ou des rumeurs, leur décision d'en mettre en circulation ou pas dépend sur le contexte
+        interprètent la désinformation en ligne. Elle a montré que les adolescents savent prêter attention au caractère
+        d'une information en ligne et à sa factualité. Dans le cadre de l'enquête, Berriche a vu que les jeunes participants
+        parviennent le plus souvent à identifier les <em>fake news</em>. En revanche, quand les adolescents tombent
+        sur des
+        <em>fake news</em> ou des rumeurs, leur décision de les rediffuser ou non dépend le plus souvent de leur contexte
         social.
-        Berriche a trouvé que quand les participants étaient dans une espace privée ou quand ils se disposaient de
-        l'anonymité, ils ont plus souvent partagé de la désinformation, surtout s'il leur permettrait de « renforcer
-        leur socialbilité »<a id="footnote-2-ref" href="#footnote-2"><sup>2</sup></a>.
+        Berriche a montré que lorsque les participants étaient dans un espace privé ou restaient anonymes,
+        ils avaient plus souvent partagé de la désinformation, notamment si cela leur permettrait de « renforcer
+        leur sociabilité »<a id="footnote-2-ref" href="#footnote-2"><sup>2</sup></a>.
     </p>
 
     <h2>Analyse de la proximité entre topics
     </h2>
 
-    <p>Certains sujets invoqués dans les propositions sont liés à l'un et l'autre, tels que les deux qui discutent
+    <p>Certains sujets évoqués dans les propositions sont liés ensemble, tels que les deux qui discutent
         l'éducation des jeunes et celui qui discute l'enseignement. Un regroupement hiérarchique (<em>hierarchical
             clustering analysis</em> ou HCA) montre la proximité entre les représentations des topics inférés par les
         algorithmes. On a implementé la méthode Ward pour relever la proximité entre topics.
@@ -379,40 +375,37 @@
 
     <img src="topic_visualisations/hierarchy.png" alt="Hierarchical Clustering of 13 topics." style="width:100%">
 
-    <p>Comme attendu, le regroupement hiérarchique relève une proximité entre les trois sujets qui appartienent aux
+    <p>Comme attendu, le regroupement hiérarchique révèle une proximité entre les trois sujets qui appartiennent aux
         discussions de l'éducation : <kbd>Enseignement & L'EMI</kbd>, <kbd>Formation au secondaire</kbd>, <kbd>Formation
-            au primaire</kbd>. Plus
-        intéressante est la proximité que montre le regroupement hiérarchique entre la discussion de la désinformation
-        (<kbd>Désinformation</kbd>) et la discussion de l'opinion dans le journalisme (<kbd>L'opinion & le
+            au primaire</kbd>. De manière plus surprenante, on observe
+        une proximité dans le regroupement hiérarchique entre la discussion de la désinformation
+        (<kbd>Désinformation</kbd>) et celle autour de l'opinion dans le journalisme (<kbd>L'opinion & le
             journalisme</kbd>). En outre,
-        la discussion sur la législation (<kbd>Legislation</kbd>) se lie à deux des sujets en particulier. Dans un
+        la discussion sur la législation (<kbd>Legislation</kbd>) s'avère liée à deux sujets en particulier : dans un
         premier temps,
-        le regroupement hiérarchique trouve que la législation est liée aux soucis sur les arnaques et les influenceurs
-        en ligne (<kbd>Arnaques & influenceurs</kbd>). Dans un deuxième temps, elle se lie aussi à la question de la
-        désanoymisation en ligne (<kbd>Désanoymisation en ligne</kbd>).
+        le regroupement hiérarchique trouve que la législation est liée aux soucis liés aux arnaques et influenceurs
+        en ligne (<kbd>Arnaques & influenceurs</kbd>) ; dans un second temps, elle se lie aussi à la question de la
+        désanoymisation en ligne (<kbd>Désanonymisation en ligne</kbd>).
     </p>
 
     <h2>Analyse de la similarité entre topics</h2>
 
     <p>La similarité cosinus est une autre méthode mathématique pour examiner les relations entre les représentations
-        des topics inférés. Cette méthode prend les représentations de deux topics et détermine le cosinus de leur
-        angle. En mettant ces calculations dans une matrice, où la similarité cosinus de chaque pair de représentation
-        occupe un carré, des nouvelles relations ressortent.
+        des topics inférés. Cette méthode prend les représentations de deux topics dans un espace vectoriel et détermine
+        le cosinus de l'angle entre les deux vecteurs. En visualisant sur une matrice les similarités cosinus entre chaque
+        paire de topic, de nouvelles relations ressortent.
     </p>
 
     <img src="topic_visualisations/heatmap.png" alt="Heat map showing the cosine similarity between topics."
         style="width:100%">
 
-    <p>L'idée de législation (<kbd>Legislation</kbd>), par exemple, se tient le plus aux propositions qui discutent
-        l'éducation
-        dans les écoles secondaires (<kbd>Formation au secondaire</kbd>). D'un dégré moins important, la législation
-        (<kbd>Legislation</kbd>) est aussi liée aux discussions sur l'accès à l'information (<kbd>Accès à
-            l'information</kbd>).
-        Contrairement au regroupement hierarchique, l'analyse par la similarité cosinus suggère que la similarité entre
-        les trois topics sur l'éducation n'est pas si forte. Selon cette dernière analyse, trois topics en particulier,
-        l'éducation dans les écoles secondaires (<kbd>Formation au secondaire</kbd>), l'accès à l'information
-        (<kbd>Accès à l'information</kbd>), et la législation (<kbd>Legislation</kbd>), ont les relations entre eux les
-        plus importantes.
+    <p>L'idée de législation (<kbd>Legislation</kbd>), par exemple, s'avère ainsi liée plus particulièrement aux
+        propositions relatives à l'éducation
+        dans les écoles secondaires (<kbd>Formation au secondaire</kbd>). Dans une moindre mesure, la législation
+        (<kbd>Legislation</kbd>) se montre également liée aux discussions sur la désinformation et l'accès à
+        l'information (<kbd>Accès à l'information</kbd>).
+        Contrairement au regroupements hierarchiques, l'analyse par la similarité cosinus suggère que la similarité entre
+        les trois topics sur l'éducation n'est pas si forte.
     </p>
 
     <h1>Question de recherche 2 : Analyse de la vote sur les propositions</h1>
