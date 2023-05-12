@@ -408,22 +408,12 @@
         les trois topics sur l'éducation n'est pas si forte.
     </p>
 
-    <h1>Question de recherche 2 : Analyse de la vote sur les propositions</h1>
+    <h1>Question de recherche 2 : Analyse des profils de vote sur les propositions</h1>
 
-    <p>La deuxième question de recherche s'appuie sur les votes qu'ont reçu les propositions. Les données brutes de
-        l'analyse de Make.org se composent d'une part les propositions et d'une autre part une matrice des votes sur les
-        propositions. La dernière met en binôme chaque proposition avec une autre proposition en montrant comment les
-        participants ont voté pour les deux.
-    </p>
-
-    <p>Par exemple, disons qu'on a une proposition qui discute de l'école primaire et une autre qui discute des chaînes
-        d'informations. Quand le même participant répond aux deux propositions, ses deux votes se trouveront dans l'un
-        des cinq catégories possibles. Le participant peut voter pour la première proposition sur l'école primaire et
-        contre la deuxième sur les chaînes d'informations. Le participant peut être d'accord avec les deux propositions.
-        Il peut être d'accord avec la première mais neutre sur la deuxième. Il peut voter contre la première sur l'école
-        primaire et voter pour la deuxième. Enfin, le participant peut ne pas avoir un avis sur la première proposition
-        et être d'accord avec la deuxième. La matrice qu'a construite l'équipe de Make.org compte, pour chaque
-        proposition, le nombre de votes qui se trouvent dans chacun de ces cinq catégories possibles.
+    <p>La seconde question de recherche s'appuie sur les votes qu'ont reçus les propositions. Les données brutes partagées pour
+        l'analyse par Make.org se composent d'une part des propositions et d'autre part d'une matrice des votes identiques sur les
+        propositions. Cette dernière associe les propositions deux à deux en indiquant combien de participants s'étant exprimé sur
+        ces deux propositions ont voté selon chacune des 9 combinaisons possibles de votes pour, contre ou neutre :
     </p>
 
     <div>
@@ -433,8 +423,8 @@
                 <th>Proposition B</th>
                 <th>Type de vote sur la proposition A</th>
                 <th>Type de vote sur la proposition B</th>
-                <th>Nombre de votes sur la proposition A du dit type</th>
-                <th>Somme de votes sur la proposition A quand le participant a aussi voté sur la proposition B</th>
+                <th>Nombre de participants ayant voté ainsi ces 2 propositions</th>
+                <th>Total des participatns ayant voté sur ces 2 propositions</th>
             </tr>
             <tr>
                 <td>Il faut depuis l'école primaire...</td>
@@ -479,34 +469,29 @@
         </table>
     </div>
 
-    <p>Cette matrice se prête à l'analyse de réseau car on peut examiner les liens entre toutes les propositions de la
-        consultation. Afin d'expérimenter avec cette idée, on a examiné quelles propositions ont toutes reçu une vote
-        affirmative. Pour réaliser cette analyse expérimentale, on a créé un réseau dans lequel chaque proposition se
-        représent comme un nœud. Cette grappe de nœds mis à l'aléatoire se soumet à l'ordre en établissant des liens
-        (des <em>edges</em>) entre les propositions si des participants ont en voté pour. En reprenant l'exemple
-        d'avant, on représenterait la proposition A, celle qui parle de l'école, et la proposition B, celle qui parle
-        des chaînes d'information, avec deux nœds. Puisque il y a des participants qui ont voté pour les deux
-        propositions, spécifiquement 24 participants, on mettrait donc un lien (un <em>edge</em>) entre les deux nœds.
+    <p>Cette matrice se prête bien à l'analyse de réseau car on peut établir des liens entre les propositions de la
+        consultation en fonction de leur co-soutien ou co-rejet par les participants.
+        Afin d'expérimenter avec cette idée, nous avons examiné les propositions ayant reçu des votes favorables.
+        Pour réaliser cette analyse expérimentale, nous avons créé un réseau dans lequel les différentes propositions
+        constituent les nœuds, reliés entre eux dès lors que des participants ont voté favorablement sur chacune des
+        deux propositions. aux autres propositions votées favorablement par des participants ayant voté favorablement sur
+        lorsqu'au moins un participant. En reprenant l'exemple ci-dessus, les 2 propositions présentées (sur l'école,
+        et sur les chaînes d'information) sont deux nœuds liés entre eux puisque 24 participants les ont voté toutes les
+        deux. Le nombre de participants ayant voté favorablement les deux propositions permet par ailleurs d'établir le
+        poids de ce lien, qui sera utilisé pour alimenter les algorithmes de spatialisation et clusterisation du réseau.
     </p>
-    <p>Très souvent, au moins un participant a voté pour deux propositions différentes. Par conséquent, le réseau doit
-        aussi faire attention au nombre de participants qui ont voté pareil sur deux propositions. En exemple, disons
-        qu'un seul participant a voté pour la proposition A, ce qui parle de l'école, et aussi pour une proposition C
-        qui parle du financement. Il faut reconnaître la distinction entre la relation A-B et la relation A-C, où la
-        première relation se rassemblait 24 participants qui ont voté pour les deux propositions concernées et la
-        dernière relation qui se rassemblait qu'un seul participant. Donc, en plus d'établir les liens (<em>edges</em>)
-        entre des propositions, on a donné à chaque lien un degré d'importance ou un <em>weight</em>. Cette dernière
-        étape permet aux alogrithmes de privilégier certains liens entre nœds, ce qui produit des clusters dans le
-        graphe.
-    </p>
-    <p>Notre hypothèse avec cette analyse de réseau était que certains sujets ou topics invoqués dans les propositions
-        se rassembleraient l'accord des participants. Par exemple, on imaginait qu'un participant qui votait pour une
-        proposition qui parlait de l'opinion et le journalisme voterait aussi en faveur d'une proposition sur l'éthique
-        du journalisme. Les résultats de l'analyse expérimentale n'ont pas confirmé cette hypothèse. Au contraire, ils
-        montrent que chaque cluster de participants qui ont voté d'une manière similaire pour les propositions se
-        compose d'un mélange héterogène des sujets invoqués.
+    <p>En menant cette analyse de réseau, nous cherchons à étudier si des familles de propositions votées favorablement
+        par les mêmes participants pouvaient faire jour et éventuellement si ces familles se recouperaient avec les
+        familles thématiques identifiées précédemment. On pourrait ainsi imaginer, par exemple, qu'un participant votant
+        pour une proposition sur l'opinion et le journalisme voterait également en faveur d'une proposition sur l'éthique
+        du journalisme. Les résultats de cette analyse expérimentale n'ont cependant pas confirmé cette hypothèse. Ils
+        tendent au contraire plutôt à montrer que les clusters de participants ayant voté ensemble de mêmes propositions se
+        répartissent de manière assez héterogène les différents sujets traités. Cependant comme nous le verrons, il est
+        fort probable que ces résultats soient faussés par la nature des données et qu'ils ne reflètent en réalité que la
+        méthodologie de présentation des propositions à voter aux participants par la plateforme de Make.org.
     </p>
 
-    <h2>Accord entre propositions par topic de la proposition</h2>
+    <h2>Recoupement de l'accord entre les propositions et des topics</h2>
 
     <div>
         <table>
@@ -570,7 +555,7 @@
     </div>
 
     <img src="graph_visualisations/agreement_clusters_by_topic.png"
-        alt="Clusters of propositions which recieved affirmative votes, colored by the proposition's topic."
+        alt="Clusters of propositions which received affirmative votes, colored by the proposition's topic."
         style="width:100%">
 
     <p>
@@ -585,7 +570,7 @@
         par rapport à quand ils étaient données aux participants. Dit autrement, un cluster des propositions qui sont
         liés par le fait qu'un grand nombre de participants ont en voté pour les toutes risque à montrer un regroupement
         des propositions qui ont étaient données à un regroupement de participants lors de la consultation. Sans avoir
-        les dates des votes ou des propositions, il n'est pas possible de bien intérpreter les clusters qui se forment
+        les dates des votes ou des propositions, il n'est pas possible de bien interpreter les clusters qui se forment
         par l'analyse de réseau.
     </p>
 
