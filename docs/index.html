@@ -490,8 +490,11 @@
         fort probable que ces résultats soient faussés par la nature des données et qu'ils ne reflètent en réalité que la
         méthodologie de présentation des propositions à voter aux participants par la plateforme de Make.org.
     </p>
+    <p>
+        TODO KC: ajouter un paragraphe méthodologique sur le filtrage du réseau
+    </p>
 
-    <h2>Recoupement de l'accord entre les propositions et des topics</h2>
+    <h2>Recoupement de l'accord sur les propositions et des topics</h2>
 
     <div>
         <table>
@@ -559,46 +562,48 @@
         style="width:100%">
 
     <p>
-        En interprétant les résultats de l'analyse expérimentale, notre nouvelle hypothèse constate que les clusters
-        apparaissant sur le graphe montrent la méthodolgie de la consultation plus que les habitudes électorales des
-        participants. Lors du déroulement de la consultation entre juin et octobre 2022, l'équipe Make.org a solicité la
-        participation d'encore plus en plus de gens et le nombre de propositions qu'ont donné les participants
-        augmentait jusqu'à 2 023. Mais pour que les participants qui y ont contribué à la fin n'aient pas eu plus de
-        propositions sur lesquelles ils pouvaient voter que les participants qui y ont contribué au début, l'équipe de
-        Make.org a limité le nombre de propositions que chaque participant pourrait voir. Du coup, l'analyse de réseau,
-        sans se disposant des dates des propositions, risque à montrer tout simplement le regroupement des propositions
-        par rapport à quand ils étaient données aux participants. Dit autrement, un cluster des propositions qui sont
-        liés par le fait qu'un grand nombre de participants ont en voté pour les toutes risque à montrer un regroupement
-        des propositions qui ont étaient données à un regroupement de participants lors de la consultation. Sans avoir
-        les dates des votes ou des propositions, il n'est pas possible de bien interpreter les clusters qui se forment
-        par l'analyse de réseau.
+        En projetant les topics de la précédente analyse sur chaque proposition via des couleurs, on peut essayer
+        ci-dessous d'identifier si les clusters formés par le co-soutien à des propositions se recoupent avec les
+        sujets traités par chacune des propositions. Mais l'héterogénéïté très forte des couleurs au sein des clusters
+        du réseau semble indiquer très clairement que ce n'est pas le cas.
+    </p>
+    <p>
+        Il est cependant difficile de tirer une conclusion définitive car la méthodologie de la consultation influe
+        très probablement fortement sur cette analyse de réseau. En effet, kors du déroulement de la consultation entre
+        juin et octobre 2022, le fonctionnement de la plateforme Make.org vise à essayer autant que possible que l'ensemble
+        des propositions soit évalué par un échantillon semblable de participants. Ainsi, lorsqu'une nouvelle proposition
+        est formulée par un participant, celle-ci n'a encore aucun vote et elle va être présentée prioritairement aux futurs
+        participants afin d'équilibrer le nombre de votes entre les différentes propositions. En conséquence, les propositions
+        ont tendance à être présentées aux utilisateurs par paquets chronologiques, ce qui influe logiquement sur l'analyse de
+        réseau réalisée à partir du vote d'un ensemble propositions par chaque utilisateur.
+        À défaut de disposer de la date à laquelle chaque propositon a été formulée, notre analyse de réseau risque en
+        conséquence de refléter avant tout l'historique temporel des propositions formulées.
     </p>
 
-    <h2>Accord entre propositions par l'âge de l'auteur de la proposition
-    </h2>
+    <h2>Recoupement de l'accord sur les propositions et de l'âge de leurs auteurs</h2>
 
-    <p>Afin de mieux explorer cette deuxième hypothèse, suite aux résultats problématiques de la première analyse, on a
-        examiné le même réseau à travers de l'âge de l'auteur de la proposition, au lieu du topic inféré de la
-        proposition. Tandis que l'analyse de réseau par topic n'a pas de cohérence dans aucun cluster, l'analyse par âge
-        montre un cluster ou les auteurs des propositions étaient plus jeunes par rapport aux autres clusters. Mais,
-        encore, ce résultat pourrait se sort de la méthodologie de la consultation et ne dit pas de grande chose sur
-        comment les participants ont voté. Il est possible qu'un groupe de participants solicités lors de la
-        consultation était plus jeunes par rapport aux autres groupes solicités.
+    <p>Afin de mieux explorer cette seconde hypothèse, nous avons tenté d'examiner le même réseau au prisme de l'âge des
+        auteurs de chaque proposition, projeté sous la forme d'un dégradé de couleur du jaune pour les contributeurs les
+        plus jeunes, au bleu pour ceux les plus âgés. Alors que la projection des topics ne révélait aucune cohérence avec
+        les clusters du réseau, cette nouvelle projection semble plus clairement indiquer des clusters majoritairement
+        composés de propositions soumises par des personnes plutôt jeunes, et d'autres par des participants plus âgés.
+        Vu au prisme préalablement évoqué de la méthodolodie de consultation, cette projection semble pouvoir indiquer
+        une participation à la consultation par vagues d'utilisateurs regroupés en générations, ce qui pourrait s'expliquer
+        par la communication organisée autour de la consultation, ayant amené des groupes de lycéens et étudiants à contribuer
+        à des périodes précises, tandis que les publics plus âgés par exemple lecteurs de la Presse Quotidienne Régionale
+        auraient été concentrés à d'autres périodes en fonction de la mise en avant de la consultation sur les sites webs de
+        ces médias à ces périodes.
     </p>
 
     <div>
         <table>
             <tr>
-                <th>Couleur</th>
-                <th>Âge
-            </tr>
-            <tr>
                 <td style="background-color: #ffff00 ; padding: 10px;"></td>
-                <td>Jeune</td>
+                <td>Propositions formulées par les participants les plus jeunes</td>
             </tr>
             <tr>
                 <td style="background-color: #0000ff ; padding: 10px;"></td>
-                <td>Vieux</td>
+                <td>Propositions formulées par les participants les plus âgés</td>
             </tr>
         </table>
     </div>
@@ -609,19 +614,19 @@
 
     <h1>Conclusion</h1>
 
-    <p>En conclusion, l'analyse de <em>topic modeling</em> a fait relever en détail les sujets invoqués dans toutes les
-        propositions valides de la consultation, ce qui fait 1 723. La décomposition des sujets suggère leur importance
-        dans l'imaginaire des français. De loin, les quatres sujets les plus importants par rapport à la question de
-        comment mieux s'informer, selon la consultation de Make.org et l'analyse du médialab, portent sur l'opinion dans
-        le journalisme, le financement des médias, la désinformation, et l'éducation en secondaire. Les analyses de la
-        similarité entre les sujets relève des liens entre des sujets qu'ont invoqués les propositions. En outre, la
-        décomposition d'un regroupment des sujets liés, tel que les trois sur l'éducation, montre également l'importance
-        que tient chacun. En comparaison de l'analyse de <em>topic modeling</em>, l'analyse de réseau n'a pas livré des
-        résulats qui font autorité. Pour continuer ces travaux, on propose d'enrichir les donnes de l'analyse de réseau
-        avec les dates du début et de la fin de la présentation de la proposition aux participants votants. À la fin de
-        nos analyses, notre nouvelle hypothèse est que la manque de cette donnée temporelle empêche le pouvoir de bien
-        interpréter les résultats d'une analyse de réseau sans confondre les clusters qui représentent un regroupement
-        par vote et ceux qui représentent un regroupement par le moment de participation à la consultation.
+    <p>En conclusion, l'analyse de <em>topic modeling</em> a permis de compléter l'analyse réalisée par Make.org en
+        identifiant automatiquement une quinzaine de sujets évoqués au travers de l'ensemble des 1723 propositions
+        valides de la consultation. <b>La décomposition des sujets suggère leur importance
+        dans l'imaginaire des français @KC: je ne comprends pas ce que tu veux dire avec cette phrase</b>.
+        Les sujets manifestement les plus importants pour les participants à la Consultation autour de la question de
+        comment mieux s'informer, semblent concentrés autour de l'opinion dans le journalisme, le financement des médias,
+        la désinformation, et l'éducation en secondaire.
+        L'analyse de la similarité entre les sujets révèle par ailleurs des liens importants entre plusieurs de ces
+        thématiques.
+        En revanche, l'analyse de réseau ne s'est pas révélée très concluante et semble surtout avoir reflété la
+        méthodologie de consultation de la plateforme Make.org plutôt que les pratiques de vote des participants.
+        Pour prolonger ces travaux, une piste intéressante pourrait être d'enrichir les données sur les propositions
+        avec les dates du début et de la fin de la présentation de chaque proposition aux participants votants.
     </p>
 
     <div>
