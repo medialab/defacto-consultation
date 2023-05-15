@@ -65,6 +65,10 @@
       méthode que nous avons préféré employer est
       <a href="https://maartengr.github.io/BERTopic/index.html"
         ><kbd>BERTopic</kbd></a
+      >. Une rédaction interactive et demonstrative du traitement est
+      <a
+        href="https://github.com/medialab/defacto-consultation.github.io/main/src/topic_modeling.ipynb"
+        >disponible en python dans un jupyter notebook</a
       >.
     </p>
 
@@ -184,21 +188,20 @@
       écoles primaires parle du développement, de l'âge, de l'esprit, et peu des
       outils numériques qui diffusent les <em>fake news</em> ni des
       <em>fake news</em>
-      elles-mêmes. En d'autre termes, les deux topics inférés se distinquent
+      elles-mêmes. En d'autre termes, les deux topics inférés se distinguent
       d'un côté par un focus sur la diffusion de la désinformation envers les
       jeunes sur les réseaux sociaux, et de l'autre par le développement de
       l'esprit critique dès un jeune âge.
     </p>
 
     <p>
-      Étant donné le déséquilibre entre la proportion de propositions concernant
-      l'éducation dans les écoles secondaires et les écoles primaires, il semble
-      que les participants ont pensé bien plus fortement aux adolescents qu'aux
-      enfants en se posant des questions sur la désinformation en ligne. D'un
-      côté, il se peut que ce biais révèle une supposition répandue chez les
-      participants que les adolescents sont, en général, plus en ligne que les
-      enfants et donc plus exposés à la désinformation, et cette supposition a
-      l'air d'être correcte.
+      En se posant des questions sur la désinformation en ligne, il semble que
+      les participants ont pensé bien plus fortement aux adolescents qu'aux
+      enfants, étant donné le déséquilibre entre les propositions concernant les
+      écoles secondaires et les écoles primaires. D'un côté, il se peut que ce
+      biais révèle une supposition répandue chez les participants que les
+      adolescents sont, en général, plus en ligne que les enfants et donc plus
+      exposés à la désinformation, et cette supposition a l'air d'être correcte.
     </p>
 
     <p>
@@ -232,9 +235,9 @@
       l'enseignement. Un regroupement hiérarchique (<em
         >hierarchical clustering analysis</em
       >
-      ou HCA) montre la proximité entre les représentations des topics inférés
-      par les algorithmes. On a implementé la méthode Ward pour relever la
-      proximité entre topics.
+      ou HCA) montre la proximité entre les représentations en vecteur des
+      topics inférés par les algorithmes. On a implementé la méthode Ward pour
+      relever la proximité entre topics.
     </p>
 
     <iframe
@@ -284,7 +287,7 @@
       les écoles secondaires (<kbd>Formation au secondaire</kbd>). Dans une
       moindre mesure, la législation (<kbd>Legislation</kbd>) se montre
       également liée aux discussions sur la désinformation et l'accès à
-      l'information (<kbd>Accès à l'information</kbd>). Contrairement au
+      l'information (<kbd>Accès à l'information</kbd>). Contrairement aux
       regroupements hierarchiques, l'analyse par la similarité cosinus suggère
       que la similarité entre les trois topics sur l'éducation n'est pas si
       forte.
@@ -320,23 +323,22 @@
       favorables. Pour réaliser cette analyse expérimentale, nous avons créé un
       réseau dans lequel les différentes propositions constituent les nœuds,
       reliés entre eux dès lors que des participants ont voté favorablement sur
-      chacune des deux propositions. aux autres propositions votées
-      favorablement par des participants ayant voté favorablement sur lorsqu'au
-      moins un participant. En reprenant l'exemple ci-dessus, les 2 propositions
-      présentées (sur l'école, et sur les chaînes d'information) sont deux nœuds
-      liés entre eux puisque 24 participants les ont voté toutes les deux. Le
-      nombre de participants ayant voté favorablement les deux propositions
-      permet par ailleurs d'établir le poids de ce lien, qui sera utilisé pour
-      alimenter les algorithmes de spatialisation et clusterisation du réseau.
+      chacune des deux propositions. En reprenant l'exemple ci-dessus, les 2
+      propositions présentées (sur l'école, et sur les chaînes d'information)
+      sont deux nœuds liés entre eux puisque 27 participants les ont voté toutes
+      les deux. Le nombre de participants ayant voté favorablement les deux
+      propositions permet par ailleurs d'établir le poids de ce lien, qui sera
+      utilisé pour alimenter les algorithmes de spatialisation et clusterisation
+      du réseau.
     </p>
     <p>
       En menant cette analyse de réseau, nous cherchons à étudier si des
       familles de propositions votées favorablement par les mêmes participants
-      émergent et, le cas échéant, si ces familles se recoupent
-      avec les familles thématiques identifiées précédemment. On pourrait ainsi
-      imaginer, par exemple, qu'un participant votant pour une proposition sur
-      l'opinion et le journalisme voterait également en faveur d'une proposition
-      sur l'éthique du journalisme. Les résultats de cette analyse expérimentale
+      émergent et, le cas échéant, si ces familles se recoupent avec les
+      familles thématiques identifiées précédemment. On pourrait ainsi imaginer,
+      par exemple, qu'un participant votant pour une proposition sur l'opinion
+      et le journalisme voterait également en faveur d'une proposition sur
+      l'éthique du journalisme. Les résultats de cette analyse expérimentale
       n'ont cependant pas confirmé cette hypothèse. Ils tendent au contraire
       plutôt à montrer que les clusters de participants ayant voté ensemble de
       mêmes propositions se répartissent de manière assez héterogène les
@@ -346,7 +348,29 @@
       propositions à voter aux participants par la plateforme de Make.org.
     </p>
     <p>
-      TODO KC: ajouter un paragraphe méthodologique sur le filtrage du réseau
+      Le script qu'on a utilisé pour construire le réseau est diponsible
+      <a
+        href="https://github.com/medialab/defacto-consultation.github.io/main/src/network_analysis.py"
+        >ici</a
+      >. Dans un premier temps, nous mettons en place les nœeuds et les liens
+      entre eux, dont le résultat est un graphe trop chargé puisque beaucoup de
+      propositions ont reçu du co-soutien. Ensuite, nous avons réduit la
+      complexité. L'objectif en réduisant la complexité est de révéler le
+      <em>backbone</em> ou la structure relationnelle la plus fondamentale
+      derrière toutes les liens. Il existe plusieurès méthodes pour réduire la
+      complexité d'un réseau. Nous avons préféré la méthode développé par M.
+      Ángeles Serrano, Marián Boguña, et Alessandro Vespignani qui s'appelle
+      <em>disparity filter</em> (filtrage du réseau).
+      <em
+        >As a result, the disparity filter reduces the number of edges in the
+        original network significantly, keeping, at the same time, almost all of
+        the weight and a large fraction of nodes</em
+      ><a id="footnote-3-ref" href="#footnote-3"><sup>3</sup></a> Cette méthode
+      est appliquée par un outil que le médialab a développé, <kbd>pelote</kbd>,
+      spécifiquement dans sa fonction <em>multiscale_backbone</em>. La fonction
+      ne gardent que les liens significatifs selon le algorithme du filtrage du
+      réseau. Le filtrage du réseau permet aux outils de visualisation à montrer
+      les clusters plus évidents.
     </p>
 
     <h3>Recoupement de l'accord sur les propositions et des topics</h3>
@@ -460,7 +484,7 @@
     <div>
       <p id="footnote-1">
         <sup>1</sup> Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y.
-        Romary, L. de la Clergerie, E., Seddah, D., Sagot, B. (2020) CamemBERT:
+        Romary, L. de la Clergerie, E., Seddah, D., Sagot, B. (2020). CamemBERT:
         a Tasty French Language Model.
         <em
           >Proceedings of the 58th Annual Meeting of the Association for
@@ -471,6 +495,12 @@
         <sup>2</sup> Berriche, M. (Forthcoming). Back to school. Do teenagers
         receive and share (false) information in all situations?
         <em>Les enjeux de l'information ou de la communication</em>.
+      </p>
+      <p id="footnote-3">
+        <sup>3</sup>Serrano, M. Ángeles, Marián Boguná, and Alessandro
+        Vespignani. (2009). "Extracting the multiscale backbone of complex
+        weighted networks."
+        <em>Proceedings of the national academy of sciences</em>.
       </p>
     </div>
   </body>
