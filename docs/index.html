@@ -1,644 +1,907 @@
 <!DOCTYPE html>
 <html>
-
-<body>
+  <body>
     <h1>Analyse des propositions de la consultation</h1>
     <h2>"Comment permettre à chacun de mieux s'informer"</h2>
 
     <h3>Contexte de la consultation Make.org</h3>
-    <p>Dans le cadre du projet De Facto et a l'initiative du CLEMI, de Sciences Po, de l'AFP, et de XWiki SAS,
-        l'organisation Make.org a été solicitée pour réaliser <a
-            href="https://make.org/FR/consultation/mieux-sinformer/results">une consultation
-            citoyenne</a> autour de la question de comment les
-        français peuvent mieux s'informer. L'objectif de la consultation était de connaître quelles solutions et quels
-        défis les français imaginent face à l'essor de la désinformation en ligne. 113 227 participants ont ainsi
-        participé à la consultation entre le 27 juin 2022 et le 31 octobre 2022. 2 023 propositions ont ainsi été
-        formulées par les participants, et 526 858 votes ont été réalisés sur la totalité de celles-ci, en votant pour,
-        contre, ou neutre.</p>
+    <p>
+      Dans le cadre du projet De Facto et a l'initiative du CLEMI, de Sciences
+      Po, de l'AFP, et de XWiki SAS, l'organisation Make.org a été solicitée
+      pour réaliser
+      <a href="https://make.org/FR/consultation/mieux-sinformer/results"
+        >une consultation citoyenne</a
+      >
+      autour de la question de comment les français peuvent mieux s'informer.
+      L'objectif de la consultation était de connaître quelles solutions et
+      quels défis les français imaginent face à l'essor de la désinformation en
+      ligne. 113 227 participants ont ainsi participé à la consultation entre le
+      27 juin 2022 et le 31 octobre 2022. 2 023 propositions ont ainsi été
+      formulées par les participants, et 526 858 votes ont été réalisés sur la
+      totalité de celles-ci, en votant pour, contre, ou neutre.
+    </p>
 
     <h3>Contexte de l'analyse Make.org</h3>
-    <p>L'équipe de Make.org a analysé les résultats de cette consultation en réalisant une analyse linguistique et
-        statistique des résultats. Contrairement à l'analyse du médialab proposée ci-dessous, l'analyse de Make.org a
-        visé à résumer les propositions qui rassemblaient le plus d'accord parmi les participants. L'objectif de cette
-        approche était de livrer une liste de propositions receuillant le plus large soutien. Parmi les 2 023
-        propositions données par les participants, l'équipe de Make.org en a ainsi considéré et analysé 1 723 valides au
-        regard de sa charte de modération, puis a séléctionné 1 063 propositions pour lesquelles au moins 70% des votes
-        étaient favorables. Avec cet échantillon, l'équipe a fait sortir de la consultation 15 idées prioritaires qui
-        résument les positions les plus souvent soutenues par rapport à la question de comment mieux s'informer face à
-        la désinformation en ligne.</p>
+    <p>
+      L'équipe de Make.org a analysé les résultats de cette consultation en
+      réalisant une analyse linguistique et statistique des résultats.
+      Contrairement à l'analyse du médialab proposée ci-dessous, l'analyse de
+      Make.org a visé à résumer les propositions qui rassemblaient le plus
+      d'accord parmi les participants. L'objectif de cette approche était de
+      livrer une liste de propositions receuillant le plus large soutien. Parmi
+      les 2 023 propositions données par les participants, l'équipe de Make.org
+      en a ainsi considéré et analysé 1 723 valides au regard de sa charte de
+      modération, puis a séléctionné 1 063 propositions pour lesquelles au moins
+      70% des votes étaient favorables. Avec cet échantillon, l'équipe a fait
+      sortir de la consultation 15 idées prioritaires qui résument les positions
+      les plus souvent soutenues par rapport à la question de comment mieux
+      s'informer face à la désinformation en ligne.
+    </p>
 
     <h3>L'analyse par le médialab</h3>
-    <p>Ayant reçu les résultats de l'analyse de la consultation, le médialab cherche à valoriser les données brutes de
-        l'analyse en se posant d'autres questions de recherche que celle qui a guidé l'analyse de Make.org. Dans un
-        premier temps, le médialab a produit une analyse linguistique sur les sujet discutés parmi les 1 723
-        propositions valides, sans chercher à prendre en compte le sens des votes correspondants. L'objectif de cette
-        approche était d'identifier les préoccupations des participants derrière les idées proposées, quel que soit le
-        soutien qu'elles aient pu recevoir. Dans un deuxième temps, le médialab a réalisé une analyse de réseau centrée
-        sur le soutien ou rejet par de mêmes participants en vue d'étudier si des regroupements de participants se
-        formaient autour de certains sujets.</p>
-
-    <h1>Question de recherche 1 : Sujets invoqués dans les propositions</h1>
-
-    <p>La première question de recherche était de savoir quels étaient les thématiques invoquées dans les propositions
-        formulées et votées par les participants à la consultation. Pour répondre à cette question, nous avons réalisé
-        une analyse linguistique de type <em>topic modeling</em>, dans laquelle on extrait des sujets (topics) au sein
-        d'un
-        corpus de textes. La méthode que nous avons préféré employer est <a
-            href="https://maartengr.github.io/BERTopic/index.html"><kbd>BERTopic</kbd></a>.</p>
-
-    <h2>Idées inférées par la consultation de Make.org</h2>
-    <p>Parmi les propositions favorables séléctionnées par l'équipe de Make.org, leur analyse a inféré 15 idées résumant
-        les positions majoritaires des participants :</p>
-
-    <ol>
-        <li>Encourager une approche critique de l'information.</li>
-        <li>Renforcer l'éducation aux médias et à l'information à l'école.</li>
-        <li>Former à la détection des fake news et à la vérification de l'information.</li>
-        <li>Assurer l'indépendance éditoriale des médias.</li>
-        <li>Proposer une information plus diversifiée.</li>
-        <li>Réguler plus efficacement les réseaux sociaux.</li>
-        <li>Renforcer les pratiques de vérification de l'information.</li>
-        <li>Sanctionner la diffusion de fake news.</li>
-        <li>Sourcer et référencer autant que possible les information publiées.</li>
-        <li>Ne pas céder à la culture de buzz et du sensationnel.</li>
-        <li>Lutter contre la concentration des médias.</li>
-        <li>Exiger davantage d'expertise dans le traitement de l'information.</li>
-        <li>Accroître la transparence sur le financement et les intérêts des médias.</li>
-        <li>Améliorer la protection des journalistes et des lanceurs d'alerte.</li>
-        <li>Mieux encadrer les publicités.</li>
-    </ol>
-
-    <h2>Topics inférés par l'analyse du médialab</h2>
-
-    <p>La base d'une analyse <em>topic modeling</em> consiste à transformer une chaîne de caractères en vecteur
-        numérique,
-        auquel on peut soumettre des algorithmes. Il existe différentes méthodes pour transformer ou "représenter" une
-        phrase en vecteur ; on peut découper la phrase et représenter chaque mot en nombres, ou on peut garder le
-        contexte des mots en représentant chaque phrase en nombres. Cette dernière technique, <em>sentence
-            embedding</em>, est
-        plus reconnue actuellement et est celle que nous avons préférée. Chaque phrase, quelle que soit sa longeur, se
-        compose du même nombre de "dimensions" au travers desquelles se caractérisent les aspects uniques de la phrase.
-        Les <em>embeddings</em> nous permettent de prendre en compte le contexte des mots employés dans une phrase.</p>
-
-    <p>Afin de créer les <em>sentence embeddings</em>, nous avons exploité un <a
-            href="https://huggingface.co/dangvantuan/sentence-camembert-large"><em>sentence
-                transformer</em></a> fine-tuné par le laboratoire français
-        <a href="https://www.lajavaness.com/">La Javaness</a> et basé sur le modèle linguistique français
-        <a href="https://huggingface.co/camembert/camembert-large">CamemBERT</a>. Le modèle CamemBERT est le principal
-        modèle
-        existant pour le français contemporain<a id="footnote-1-ref" href="#footnote-1"><sup>1</sup></a>. Afin de
-        s'adapter à toutes les nuances d'une phrase, le <em>sentence
-            embedding</em> a forcement beaucoup de dimensions, pourtant il y en a trop pour qu'un algorithme puisse bien
-        analyser la représentation. Nous avons donc réduit la complexité de la représentation en utilisant l'algorithme
-        UMAP (<em>Uniform Manifold Approximation and Projection for Dimension Reduction</em>). Ensuite, les
-        <em>embeddings</em> des
-        phrases ont été regroupés par l'algorithme HDBSCAN (<em>Hierarchical Density-Based Spatial Clustering of
-            Applications with Noise</em>).
+    <p>
+      Ayant reçu les résultats de l'analyse de la consultation, le médialab
+      cherche à valoriser les données brutes de l'analyse en se posant d'autres
+      questions de recherche que celle qui a guidé l'analyse de Make.org. Dans
+      un premier temps, le médialab a produit une analyse linguistique sur les
+      sujet discutés parmi les 1 723 propositions valides, sans chercher à
+      prendre en compte le sens des votes correspondants. L'objectif de cette
+      approche était d'identifier les préoccupations des participants derrière
+      les idées proposées, quel que soit le soutien qu'elles aient pu recevoir.
+      Dans un deuxième temps, le médialab a réalisé une analyse de réseau
+      centrée sur le soutien ou rejet par de mêmes participants en vue d'étudier
+      si des regroupements de participants se formaient autour de certains
+      sujets.
     </p>
 
-    <p>La dernière étape de notre approche consistait à donner un nom aux clusters de phrases créés par l'algorithme
-        HBDSCAN. Pour créer les représentations des topics, nous avons utilisé un autre <em>transformer</em> que le
-        <em>sentence
-            transformer</em> : le c-TF-IDF (<em>Class-based term frequency-inverse document frequency</em>), qui se base
-        sur le
-        <em>TfidfTransformer</em> de scikit-learn. Pour terminer, nous avons relu les topics à la main, fusionné
-        certains entre eux, puis donné à chacun un nom compréhensif.
+    <h2>Question de recherche 1 : Sujets invoqués dans les propositions</h2>
+
+    <p>
+      La première question de recherche était de savoir quels étaient les
+      thématiques invoquées dans les propositions formulées et votées par les
+      participants à la consultation. Pour répondre à cette question, nous avons
+      réalisé une analyse linguistique de type <em>topic modeling</em>, dans
+      laquelle on extrait des sujets (topics) au sein d'un corpus de textes. La
+      méthode que nous avons préféré employer est
+      <a href="https://maartengr.github.io/BERTopic/index.html"
+        ><kbd>BERTopic</kbd></a
+      >.
     </p>
 
-    <img src="topic_visualisations/barchart.png" atl="Bar charts of 13 topics, showing the most representative tokens."
-        style="width:100%">
+    <h3>Idées inférées par la consultation de Make.org</h3>
+    <p>
+      Parmi les propositions favorables séléctionnées par l'équipe de Make.org,
+      leur analyse a inféré 15 idées résumant les positions majoritaires des
+      participants :
+    </p>
 
-    <p>L'analyse du médialab a ainsi inféré 13 topics invoqués dans les 1 723 propositions valides de la consultation.
+    <iframe
+      id="makeOrgs_topics"
+      title="Topics infered by Make.Org consultation"
+      src="https://github.com/medialab/defacto-consultation.github.io/blob/main/docs/tables/makeOrgs_topics.html"
+    ></iframe>
+
+    <h3>Topics inférés par l'analyse du médialab</h3>
+
+    <p>
+      La base d'une analyse <em>topic modeling</em> consiste à transformer une
+      chaîne de caractères en vecteur numérique, auquel on peut soumettre des
+      algorithmes. Il existe différentes méthodes pour transformer ou
+      "représenter" une phrase en vecteur ; on peut découper la phrase et
+      représenter chaque mot en nombres, ou on peut garder le contexte des mots
+      en représentant chaque phrase en nombres. Cette dernière technique,
+      <em>sentence embedding</em>, est plus reconnue actuellement et est celle
+      que nous avons préférée. Chaque phrase, quelle que soit sa longeur, se
+      compose du même nombre de "dimensions" au travers desquelles se
+      caractérisent les aspects uniques de la phrase. Les
+      <em>embeddings</em> nous permettent de prendre en compte le contexte des
+      mots employés dans une phrase.
+    </p>
+
+    <p>
+      Afin de créer les <em>sentence embeddings</em>, nous avons exploité un
+      <a href="https://huggingface.co/dangvantuan/sentence-camembert-large"
+        ><em>sentence transformer</em></a
+      >
+      fine-tuné par le laboratoire français
+      <a href="https://www.lajavaness.com/">La Javaness</a> et basé sur le
+      modèle linguistique français
+      <a href="https://huggingface.co/camembert/camembert-large">CamemBERT</a>.
+      Le modèle CamemBERT est le principal modèle existant pour le français
+      contemporain<a id="footnote-1-ref" href="#footnote-1"><sup>1</sup></a
+      >. Afin de s'adapter à toutes les nuances d'une phrase, le
+      <em>sentence embedding</em> a forcement beaucoup de dimensions, pourtant
+      il y en a trop pour qu'un algorithme puisse bien analyser la
+      représentation. Nous avons donc réduit la complexité de la représentation
+      en utilisant l'algorithme UMAP (<em
+        >Uniform Manifold Approximation and Projection for Dimension
+        Reduction</em
+      >). Ensuite, les <em>embeddings</em> des phrases ont été regroupés par
+      l'algorithme HDBSCAN (<em
+        >Hierarchical Density-Based Spatial Clustering of Applications with
+        Noise</em
+      >).
+    </p>
+
+    <p>
+      La dernière étape de notre approche consistait à donner un nom aux
+      clusters de phrases créés par l'algorithme HBDSCAN. Pour créer les
+      représentations des topics, nous avons utilisé un autre
+      <em>transformer</em> que le <em>sentence transformer</em> : le c-TF-IDF
+      (<em>Class-based term frequency-inverse document frequency</em>), qui se
+      base sur le <em>TfidfTransformer</em> de scikit-learn. Pour terminer, nous
+      avons relu les topics à la main, fusionné certains entre eux, puis donné à
+      chacun un nom compréhensif.
+    </p>
+
+    <iframe
+      id="barchart"
+      title="Bar charts of 13 topics, showing the most representative tokens"
+      src="https://github.com/medialab/defacto-consultation.github.io/blob/main/docs/topic_visualisations/barchart.html"
+    ></iframe>
+
+    <p>
+      L'analyse du médialab a ainsi inféré 13 topics invoqués dans les 1 723
+      propositions valides de la consultation.
     </p>
 
     <div>
-        <table style="width:100%">
-            <tr>
-                <th style="width:20%">Topic</th>
-                <th style="width:5%">Propositions associées</th>
-                <th style="width:25%">Mots / phrases les plus représentatifs</th>
-                <th style="width:45%">Propositions représentatives</th>
-            </tr>
-            <tr>
-                <th rowspan="3">1. L'opinion et le journalisme</th>
-                <td rowspan="3">263</td>
-                <td rowspan="3">journalistes, politiques, sujets, débats, arrêtent, opinion</td>
-                <td>Il faut que les journalistes des médias, télévisions, radios arrêtent de donner leur avis en
-                    permanence.</td>
-            </tr>
-            <tr>
-                <td>Il faut que les journalistes se drapent d'humilité et arrêtent de voir dans le journalisme un métier
-                    d'ambitions personnelles.</td>
-            </tr>
-            <tr>
-                <td>Il faut organiser la mise en débat publique des idées sur des temps assez longs pour permettre aux
-                    contradicteurs d'argumenter leur position.</td>
-                </td>
-            <tr>
-                <th rowspan="3">2. Financement et indépendance des médias</th>
-                <td rowspan="3">210</td>
-                <td rowspan="3">financement, concentration médias, milliardaires, interdire, grands groupes, médias
-                    indpépendants</td>
-                <td>Il faut que les médias soient financés en partie par les finances publiques et en partie par le
-                    secteur privé, mais en toute transparence.</td>
-            </tr>
-            <tr>
-                <td>Il faut que la loi empêche l'achat de médias par une ou plusieurs personnes. L'information n'est pas
-                    une marchandise.</td>
-            </tr>
-            <tr>
-                <td>Il faut que les médias français ne soit plus possédé par 8 milliardaires qui protègent leurs
-                    intérêts.</td>
-                </td>
-            <tr>
-                <th rowspan="3">3. Désinformation</th>
-                <td rowspan="3">178</td>
-                <td rowspan="3">fake news, vérifiée, qualité, plusieurs, sources information, citer</td>
-                <td>l faut que chaque publication cite obligatoirement ses sources.</td>
-            </tr>
-            <tr>
-                <td>Il faut former un organisme de débunk de fake news de qualité et forcer les algorithmes de
-                    recommandations à largement partager leur travail.</td>
-            </tr>
-            <tr>
-                <td>Il faut des experts en désamorçage de fake news, reconnus et crédibles.</td>
-                </td>
-            <tr>
-                <th rowspan="3">4. Formation au secondaire</th>
-                <td rowspan="3">152</td>
-                <td rowspan="3">réseaux sociaux, éducation médias information, professeurs documentalistes, alogrithmes,
-                    responsables, fake</td>
-                <td>Il faut faire de l'éducation aux médias et à l'information, une grande cause nationale.</td>
-            </tr>
-            <tr>
-                <td>Il faut que l'école explique le fonctionnement des réseaux sociaux à chaque enfant pour qu'ils
-                    comprennent la perversité des mécanismes.</td>
-            </tr>
-            <tr>
-                <td>Il faut créer une discipline d'information-documentation dispensée par les professeurs
-                    documentalistes pour tous les élèves du secondaire.</td>
-                </td>
-            <tr>
-                <th rowspan="3">5. Formation au primaire</th>
-                <td rowspan="3">85</td>
-                <td rowspan="3">esprit, développer esprit critique, analyser, âge, dès jeune âge</td>
-                <td>Il faut généraliser depuis l'école primaire un apprentissage de l'esprit critique.</td>
-            </tr>
-            <tr>
-                <td>Il faut apprendre très tôt, à développer son esprit critique. Cours ludiques et dédiés.</td>
-            </tr>
-            <tr>
-                <td>Il faut développer et renforcer les compétences psycho-sociales dès l'école maternelle, et ce,
-                    jusqu'à l'âge adulte.</td>
-                </td>
-            <tr>
-                <th rowspan="3">6. Accès à l'information</th>
-                <td rowspan="3">51</td>
-                <td rowspan="3">rendre accessible, papier, abonnements gratuits, beaucoup, établissements scolaires,
-                    démocratiser</td>
-                <td>Il faut faciliter l'accès financier aux médias sous forme numérique. Ils sont trop chers.</td>
-            </tr>
-            <tr>
-                <td>Il faut voir comment fournir une offre d'informations de qualité à un prix accessible aux plus
-                    pauvres.</td>
-            </tr>
-            <tr>
-                <td>Il faut permettre un abonnement en ligne à un panel de titres de presse d'information avec une
-                    ristourne pour les étudiants, chômeurs etc.</td>
-                </td>
-            <tr>
-                <th rowspan="3">7. Chaînes d'information en continu</th>
-                <td rowspan="3">47</td>
-                <td rowspan="3">europe, chaînes information continu, france télévision, créer chaîne, affranchir, quota
-                </td>
-                <td>Il faut limiter les chaines d'info en boucle sources de conditionnement et favoriser, par un
-                    financement public, celles qui font réfléchir.</td>
-            </tr>
-            <tr>
-                <td>Il faut des chaînes d’informations indépendantes à la télévision, et libres de paroles.</td>
-            </tr>
-            <tr>
-                <td>Il faut que les chaînes d’information en continu soient supprimées pour arrêter la pratique du vide.
-                </td>
-                </td>
-            <tr>
-                <th rowspan="3">8. Législation</th>
-                <td rowspan="3">46</td>
-                <td rowspan="3">news, propos, diffusant, élus, sanctionner médias, pénalement</td>
-                <td>Il faut sanctionner les médias qui diffusent trop de fake news : retrait licence journalisme,
-                    suspension d’audience, déconnexion du site web.</td>
-            </tr>
-            <tr>
-                <td>Il faut que les auteurs de fake News soient sanctionnés pénalement et financièrement.</td>
-            </tr>
-            <tr>
-                <td>Il faut punir financièrement et fortement les auteurs de fausses info ainsi que les médias,
-                    supports, plateformes etc.... qui les diffusent.</td>
-                </td>
-            <tr>
-                <th rowspan="3">9. Éthique du journalisme</th>
-                <td rowspan="3">45</td>
-                <td rowspan="3">éthique, charte munique, déontologie journalistique,respect, professionnelle, conseil
-                </td>
-                <td>Il faut inclure dans toutes les formations dédiées, un code de déontologie, voire un serment, à
-                    l'image des médecins (Hippocrate).</td>
-            </tr>
-            <tr>
-                <td>Il faut créer un organisme indépendant pour contrôler le travail des médias et le respect de
-                    l’éthique journalistique.</td>
-            </tr>
-            <tr>
-                <td>Il faut transformer le « Conseil de déontologie des médias » créé en 2019 en véritable
-                    contre-pouvoir citoyen.</td>
-                </td>
-            <tr>
-                <th rowspan="3">10. Désanonymisation en ligne</th>
-                <td rowspan="3">24</td>
-                <td rowspan="3">anonymat réseaux interdir, sociaux interdire, supprimer, vrai nom, internet</td>
-                <td>Il faut protéger les utilisateurs d’Internet et des réseaux sociaux contre toute atteinte résultant
-                    de l’utilisation de leurs données.</td>
-            </tr>
-            <tr>
-                <td>Il faut supprimer l'anonymat sur les réseaux sociaux.</td>
-            </tr>
-            <tr>
-                <td>Il faut interdire les réseaux sociaux ou obliger de donner sa véritable identité pour poster.</td>
-                </td>
-            <tr>
-                <th rowspan="3">11. Arnaques et influenceurs</th>
-                <td rowspan="3">20</td>
-                <td rowspan="3">sanctionner youtube lorsqu, pubs arnaques, médias information, influenceurs, pub
-                    institutionneles dénoncer, moins respect victimes</td>
-                <td>Il faut responsabiliser les médias d'informations qui alertent sur les arnaques alors qu'ils
-                    laissent eux-mêmes ce type de pub sur leur site.</td>
-            </tr>
-            <tr>
-                <td>Il faut imposer aux médias de signaler les espaces publicitaires/ partenariats avec un symbole
-                    uniformisé clairement visible.</td>
-            </tr>
-            <tr>
-                <td>Il faut ne plus autoriser de publicité après des informations dramatiques, au moins par respect pour
-                    les victimes et leurs familles.</td>
-                </td>
-            <tr>
-                <th rowspan="3">12. Échelles des médias</th>
-                <td rowspan="3">17</td>
-                <td rowspan="3">médias locaux, web, niveau local retrouver, notoriété légimité moins, national européen
-                    laisser</td>
-                <td>Il faut remettre en avant les médias (presse, site web, app...) pour s'informer sur les actualités
-                    locales.</td>
-            </tr>
-            <tr>
-                <td>Il faut remettre en avant l'actualité des territoires en diffusant plus facilement les actualités
-                    locales sur le web et dans les médias.</td>
-            </tr>
-            <tr>
-                <td>Il faut laisser aux chaines régionales et à la PQR le traitement de l'info du village et traiter
-                    plus souvent de l'international.</td>
-                </td>
-            <tr>
-                <th rowspan="3">13. Enseignment et EMI (Éducation aux médias et à l'information)</th>
-                <td rowspan="3">16</td>
-                <td rowspan="3">emploi temps élèves, emi professeurs, élèves, donner moyens professeurs, enseignement
-                    emi, documentalistes enseigner emi</td>
-                <td>Il faut prévoir dans l'emploi du temps 1h par semaine pour que les professeurs documentalistes
-                    puissent former les élèves à l'EMI.</td>
-            </tr>
-            <tr>
-                <td>Il faut donner les moyens aux professeurs documentalistes d'exercer une véritable formation à l'EMI
-                    avec une progression du collège au lycée.</td>
-            </tr>
-            <tr>
-                <td>Il faut inscrire l'EMI dans l'emploi du temps des élèves de la 6e à la Terminale gérée par les profs
-                    docs dont c'est le domaine d'expertise.</td>
-                </td>
-        </table>
+      <table style="width: 100%">
+        <tr>
+          <th style="width: 20%">Topic</th>
+          <th style="width: 5%">Propositions associées</th>
+          <th style="width: 25%">Mots / phrases les plus représentatifs</th>
+          <th style="width: 45%">Propositions représentatives</th>
+        </tr>
+        <tr>
+          <th rowspan="3">1. L'opinion et le journalisme</th>
+          <td rowspan="3">263</td>
+          <td rowspan="3">
+            journalistes, politiques, sujets, débats, arrêtent, opinion
+          </td>
+          <td>
+            Il faut que les journalistes des médias, télévisions, radios
+            arrêtent de donner leur avis en permanence.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que les journalistes se drapent d'humilité et arrêtent de
+            voir dans le journalisme un métier d'ambitions personnelles.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut organiser la mise en débat publique des idées sur des temps
+            assez longs pour permettre aux contradicteurs d'argumenter leur
+            position.
+          </td>
+        </tr>
 
+        <tr>
+          <th rowspan="3">2. Financement et indépendance des médias</th>
+          <td rowspan="3">210</td>
+          <td rowspan="3">
+            financement, concentration médias, milliardaires, interdire, grands
+            groupes, médias indpépendants
+          </td>
+          <td>
+            Il faut que les médias soient financés en partie par les finances
+            publiques et en partie par le secteur privé, mais en toute
+            transparence.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que la loi empêche l'achat de médias par une ou plusieurs
+            personnes. L'information n'est pas une marchandise.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que les médias français ne soit plus possédé par 8
+            milliardaires qui protègent leurs intérêts.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">3. Désinformation</th>
+          <td rowspan="3">178</td>
+          <td rowspan="3">
+            fake news, vérifiée, qualité, plusieurs, sources information, citer
+          </td>
+          <td>
+            l faut que chaque publication cite obligatoirement ses sources.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut former un organisme de débunk de fake news de qualité et
+            forcer les algorithmes de recommandations à largement partager leur
+            travail.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut des experts en désamorçage de fake news, reconnus et
+            crédibles.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">4. Formation au secondaire</th>
+          <td rowspan="3">152</td>
+          <td rowspan="3">
+            réseaux sociaux, éducation médias information, professeurs
+            documentalistes, alogrithmes, responsables, fake
+          </td>
+          <td>
+            Il faut faire de l'éducation aux médias et à l'information, une
+            grande cause nationale.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que l'école explique le fonctionnement des réseaux sociaux à
+            chaque enfant pour qu'ils comprennent la perversité des mécanismes.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut créer une discipline d'information-documentation dispensée
+            par les professeurs documentalistes pour tous les élèves du
+            secondaire.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">5. Formation au primaire</th>
+          <td rowspan="3">85</td>
+          <td rowspan="3">
+            esprit, développer esprit critique, analyser, âge, dès jeune âge
+          </td>
+          <td>
+            Il faut généraliser depuis l'école primaire un apprentissage de
+            l'esprit critique.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut apprendre très tôt, à développer son esprit critique. Cours
+            ludiques et dédiés.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut développer et renforcer les compétences psycho-sociales dès
+            l'école maternelle, et ce, jusqu'à l'âge adulte.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">6. Accès à l'information</th>
+          <td rowspan="3">51</td>
+          <td rowspan="3">
+            rendre accessible, papier, abonnements gratuits, beaucoup,
+            établissements scolaires, démocratiser
+          </td>
+          <td>
+            Il faut faciliter l'accès financier aux médias sous forme numérique.
+            Ils sont trop chers.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut voir comment fournir une offre d'informations de qualité à
+            un prix accessible aux plus pauvres.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut permettre un abonnement en ligne à un panel de titres de
+            presse d'information avec une ristourne pour les étudiants, chômeurs
+            etc.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">7. Chaînes d'information en continu</th>
+          <td rowspan="3">47</td>
+          <td rowspan="3">
+            europe, chaînes information continu, france télévision, créer
+            chaîne, affranchir, quota
+          </td>
+          <td>
+            Il faut limiter les chaines d'info en boucle sources de
+            conditionnement et favoriser, par un financement public, celles qui
+            font réfléchir.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut des chaînes d’informations indépendantes à la télévision, et
+            libres de paroles.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que les chaînes d’information en continu soient supprimées
+            pour arrêter la pratique du vide.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">8. Législation</th>
+          <td rowspan="3">46</td>
+          <td rowspan="3">
+            news, propos, diffusant, élus, sanctionner médias, pénalement
+          </td>
+          <td>
+            Il faut sanctionner les médias qui diffusent trop de fake news :
+            retrait licence journalisme, suspension d’audience, déconnexion du
+            site web.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut que les auteurs de fake News soient sanctionnés pénalement
+            et financièrement.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut punir financièrement et fortement les auteurs de fausses
+            info ainsi que les médias, supports, plateformes etc.... qui les
+            diffusent.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">9. Éthique du journalisme</th>
+          <td rowspan="3">45</td>
+          <td rowspan="3">
+            éthique, charte munique, déontologie journalistique,respect,
+            professionnelle, conseil
+          </td>
+          <td>
+            Il faut inclure dans toutes les formations dédiées, un code de
+            déontologie, voire un serment, à l'image des médecins (Hippocrate).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut créer un organisme indépendant pour contrôler le travail des
+            médias et le respect de l’éthique journalistique.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut transformer le « Conseil de déontologie des médias » créé en
+            2019 en véritable contre-pouvoir citoyen.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">10. Désanonymisation en ligne</th>
+          <td rowspan="3">24</td>
+          <td rowspan="3">
+            anonymat réseaux interdir, sociaux interdire, supprimer, vrai nom,
+            internet
+          </td>
+          <td>
+            Il faut protéger les utilisateurs d’Internet et des réseaux sociaux
+            contre toute atteinte résultant de l’utilisation de leurs données.
+          </td>
+        </tr>
+        <tr>
+          <td>Il faut supprimer l'anonymat sur les réseaux sociaux.</td>
+        </tr>
+        <tr>
+          <td>
+            Il faut interdire les réseaux sociaux ou obliger de donner sa
+            véritable identité pour poster.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">11. Arnaques et influenceurs</th>
+          <td rowspan="3">20</td>
+          <td rowspan="3">
+            sanctionner youtube lorsqu, pubs arnaques, médias information,
+            influenceurs, pub institutionneles dénoncer, moins respect victimes
+          </td>
+          <td>
+            Il faut responsabiliser les médias d'informations qui alertent sur
+            les arnaques alors qu'ils laissent eux-mêmes ce type de pub sur leur
+            site.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut imposer aux médias de signaler les espaces publicitaires/
+            partenariats avec un symbole uniformisé clairement visible.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut ne plus autoriser de publicité après des informations
+            dramatiques, au moins par respect pour les victimes et leurs
+            familles.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">12. Échelles des médias</th>
+          <td rowspan="3">17</td>
+          <td rowspan="3">
+            médias locaux, web, niveau local retrouver, notoriété légimité
+            moins, national européen laisser
+          </td>
+          <td>
+            Il faut remettre en avant les médias (presse, site web, app...) pour
+            s'informer sur les actualités locales.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut remettre en avant l'actualité des territoires en diffusant
+            plus facilement les actualités locales sur le web et dans les
+            médias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut laisser aux chaines régionales et à la PQR le traitement de
+            l'info du village et traiter plus souvent de l'international.
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="3">
+            13. Enseignment et EMI (Éducation aux médias et à l'information)
+          </th>
+          <td rowspan="3">16</td>
+          <td rowspan="3">
+            emploi temps élèves, emi professeurs, élèves, donner moyens
+            professeurs, enseignement emi, documentalistes enseigner emi
+          </td>
+          <td>
+            Il faut prévoir dans l'emploi du temps 1h par semaine pour que les
+            professeurs documentalistes puissent former les élèves à l'EMI.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut donner les moyens aux professeurs documentalistes d'exercer
+            une véritable formation à l'EMI avec une progression du collège au
+            lycée.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Il faut inscrire l'EMI dans l'emploi du temps des élèves de la 6e à
+            la Terminale gérée par les profs docs dont c'est le domaine
+            d'expertise.
+          </td>
+        </tr>
+      </table>
     </div>
 
     <p>569 propositions ne se rattachent à aucun des topics inférés.</p>
 
-    <h2>Analyse de la distribution des topics</h2>
+    <h3>Analyse de la distribution des topics</h3>
 
-    <p>Les algorithmes ont détecté et distingué trois sujets liés à l'éducation. Premièrement, au moins 16 propositions
-        ont évoqué la profession de l'enseignement et l'EMI (Éducation aux médias et à l'information) en particulier.
-        Deuxièmement, au moins 85 propositions concernent l'education en maternelle. Troisièmement, au moins 152
-        propositions ont traité de l'éducation des jeunes en général et plus spécifiquement en secondaire. Au lieu de dire
-        simplement que l'éducation est une préoccupation des participants lorsqu'ils sont interrogés sur "comment mieux
-        s'informer", on peut dire que leurs intérêts se concentrent surtout sur les habitudes et les compétences critiques des
-        jeunes en secondaire, lesquels n'étaient pas directement consultés puisque l'âge moyen des participants était
-        d'environ 50 ans.
+    <p>
+      Les algorithmes ont détecté et distingué trois sujets liés à l'éducation.
+      Premièrement, au moins 16 propositions ont évoqué la profession de
+      l'enseignement et l'EMI (Éducation aux médias et à l'information) en
+      particulier. Deuxièmement, au moins 85 propositions concernent l'education
+      en maternelle. Troisièmement, au moins 152 propositions ont traité de
+      l'éducation des jeunes en général et plus spécifiquement en secondaire. Au
+      lieu de dire simplement que l'éducation est une préoccupation des
+      participants lorsqu'ils sont interrogés sur "comment mieux s'informer", on
+      peut dire que leurs intérêts se concentrent surtout sur les habitudes et
+      les compétences critiques des jeunes en secondaire, lesquels n'étaient pas
+      directement consultés puisque l'âge moyen des participants était d'environ
+      50 ans.
     </p>
 
-    <p>Le regroupement des propositions qu'on a appelé « Formation au secondaire » inclut des propositions qui ciblent
-        explicitement l'éducation en secondaire et des propositions qui utilisent souvent les mots « fake » et « réseaux
-        sociaux ». Pour faire une comparaison, le regroupement qu'on a appelé « Formation au primaire » est bien plus
-        optimiste. Par rapport au topic de l'éducation aux écoles secondaires, qui parlent des réseaux sociaux, des
-        algorithmes, et du « fake news », le topic de l'éducation aux écoles primaires parle du développement, de
-        l'âge, de l'esprit, et peu des outils numériques qui diffusent les <em>fake news</em> ni des
-        <em>fake news</em>
-        elles-mêmes. En d'autre termes, les deux topics inférés se distinquent d'un côté par un focus sur la diffusion
-        de la désinformation envers les jeunes sur les réseaux sociaux, et de l'autre par le développement de l'esprit
-        critique dès un jeune âge.
+    <p>
+      Le regroupement des propositions qu'on a appelé « Formation au secondaire
+      » inclut des propositions qui ciblent explicitement l'éducation en
+      secondaire et des propositions qui utilisent souvent les mots « fake » et
+      « réseaux sociaux ». Pour faire une comparaison, le regroupement qu'on a
+      appelé « Formation au primaire » est bien plus optimiste. Par rapport au
+      topic de l'éducation aux écoles secondaires, qui parlent des réseaux
+      sociaux, des algorithmes, et du « fake news », le topic de l'éducation aux
+      écoles primaires parle du développement, de l'âge, de l'esprit, et peu des
+      outils numériques qui diffusent les <em>fake news</em> ni des
+      <em>fake news</em>
+      elles-mêmes. En d'autre termes, les deux topics inférés se distinquent
+      d'un côté par un focus sur la diffusion de la désinformation envers les
+      jeunes sur les réseaux sociaux, et de l'autre par le développement de
+      l'esprit critique dès un jeune âge.
     </p>
 
-    <p>Étant donné le déséquilibre entre la proportion de propositions concernant l'éducation dans les écoles secondaires
-        et les écoles primaires, il semble que les participants ont pensé bien plus fortement aux adolescents
-        qu'aux enfants en se posant des questions sur la désinformation en ligne. D'un côté, il se peut que ce biais
-        révèle une supposition répandue chez les participants que les adolescents sont, en général, plus en ligne que
-        les enfants et donc plus exposés à la désinformation, et cette supposition a l'air d'être correcte.
+    <p>
+      Étant donné le déséquilibre entre la proportion de propositions concernant
+      l'éducation dans les écoles secondaires et les écoles primaires, il semble
+      que les participants ont pensé bien plus fortement aux adolescents qu'aux
+      enfants en se posant des questions sur la désinformation en ligne. D'un
+      côté, il se peut que ce biais révèle une supposition répandue chez les
+      participants que les adolescents sont, en général, plus en ligne que les
+      enfants et donc plus exposés à la désinformation, et cette supposition a
+      l'air d'être correcte.
     </p>
 
-    <p>De l'autre côté, il se peut qu'un autre biais chez les participants ait influé : que les adolescents soient
-        particulièrement susceptibles à la désinformation en ligne par rapport à la population en général.
-        Ce présupposé ne semble pourtant pas bien justifié. Chercheuse sur le projet De Facto et doctorante au
-        médialab, Manon Berriche a méné une enquête dans un collège pour examiner comment les adolescents recoivent et
-        interprètent la désinformation en ligne. Elle a montré que les adolescents savent prêter attention au caractère
-        d'une information en ligne et à sa factualité. Dans le cadre de l'enquête, Berriche a vu que les jeunes participants
-        parviennent le plus souvent à identifier les <em>fake news</em>. En revanche, quand les adolescents tombent
-        sur des
-        <em>fake news</em> ou des rumeurs, leur décision de les rediffuser ou non dépend le plus souvent de leur contexte
-        social.
-        Berriche a montré que lorsque les participants étaient dans un espace privé ou restaient anonymes,
-        ils avaient plus souvent partagé de la désinformation, notamment si cela leur permettrait de « renforcer
-        leur sociabilité »<a id="footnote-2-ref" href="#footnote-2"><sup>2</sup></a>.
+    <p>
+      De l'autre côté, il se peut qu'un autre biais chez les participants ait
+      influé : que les adolescents soient particulièrement susceptibles à la
+      désinformation en ligne par rapport à la population en général. Ce
+      présupposé ne semble pourtant pas bien justifié. Chercheuse sur le projet
+      De Facto et doctorante au médialab, Manon Berriche a méné une enquête dans
+      un collège pour examiner comment les adolescents recoivent et interprètent
+      la désinformation en ligne. Elle a montré que les adolescents savent
+      prêter attention au caractère d'une information en ligne et à sa
+      factualité. Dans le cadre de l'enquête, Berriche a vu que les jeunes
+      participants parviennent le plus souvent à identifier les
+      <em>fake news</em>. En revanche, quand les adolescents tombent sur des
+      <em>fake news</em> ou des rumeurs, leur décision de les rediffuser ou non
+      dépend le plus souvent de leur contexte social. Berriche a montré que
+      lorsque les participants étaient dans un espace privé ou restaient
+      anonymes, ils avaient plus souvent partagé de la désinformation, notamment
+      si cela leur permettrait de « renforcer leur sociabilité »<a
+        id="footnote-2-ref"
+        href="#footnote-2"
+        ><sup>2</sup></a
+      >.
     </p>
 
-    <h2>Analyse de la proximité entre topics
+    <h3>Analyse de la proximité entre topics</h3>
+
+    <p>
+      Certains sujets évoqués dans les propositions sont liés ensemble, tels que
+      les deux qui discutent l'éducation des jeunes et celui qui discute
+      l'enseignement. Un regroupement hiérarchique (<em
+        >hierarchical clustering analysis</em
+      >
+      ou HCA) montre la proximité entre les représentations des topics inférés
+      par les algorithmes. On a implementé la méthode Ward pour relever la
+      proximité entre topics.
+    </p>
+
+    <img
+      src="topic_visualisations/hierarchy.png"
+      alt="Hierarchical Clustering of 13 topics."
+      style="width: 100%"
+    />
+
+    <p>
+      Comme attendu, le regroupement hiérarchique révèle une proximité entre les
+      trois sujets qui appartiennent aux discussions de l'éducation :
+      <kbd>Enseignement & L'EMI</kbd>, <kbd>Formation au secondaire</kbd>,
+      <kbd>Formation au primaire</kbd>. De manière plus surprenante, on observe
+      une proximité dans le regroupement hiérarchique entre la discussion de la
+      désinformation (<kbd>Désinformation</kbd>) et celle autour de l'opinion
+      dans le journalisme (<kbd>L'opinion & le journalisme</kbd>). En outre, la
+      discussion sur la législation (<kbd>Legislation</kbd>) s'avère liée à deux
+      sujets en particulier : dans un premier temps, le regroupement
+      hiérarchique trouve que la législation est liée aux soucis liés aux
+      arnaques et influenceurs en ligne (<kbd>Arnaques & influenceurs</kbd>) ;
+      dans un second temps, elle se lie aussi à la question de la
+      désanoymisation en ligne (<kbd>Désanonymisation en ligne</kbd>).
+    </p>
+
+    <h3>Analyse de la similarité entre topics</h3>
+
+    <p>
+      La similarité cosinus est une autre méthode mathématique pour examiner les
+      relations entre les représentations des topics inférés. Cette méthode
+      prend les représentations de deux topics dans un espace vectoriel et
+      détermine le cosinus de l'angle entre les deux vecteurs. En visualisant
+      sur une matrice les similarités cosinus entre chaque paire de topic, de
+      nouvelles relations ressortent.
+    </p>
+
+    <img
+      src="topic_visualisations/heatmap.png"
+      alt="Heat map showing the cosine similarity between topics."
+      style="width: 100%"
+    />
+
+    <p>
+      L'idée de législation (<kbd>Legislation</kbd>), par exemple, s'avère ainsi
+      liée plus particulièrement aux propositions relatives à l'éducation dans
+      les écoles secondaires (<kbd>Formation au secondaire</kbd>). Dans une
+      moindre mesure, la législation (<kbd>Legislation</kbd>) se montre
+      également liée aux discussions sur la désinformation et l'accès à
+      l'information (<kbd>Accès à l'information</kbd>). Contrairement au
+      regroupements hierarchiques, l'analyse par la similarité cosinus suggère
+      que la similarité entre les trois topics sur l'éducation n'est pas si
+      forte.
+    </p>
+
+    <h2>
+      Question de recherche 2 : Analyse des profils de vote sur les propositions
     </h2>
 
-    <p>Certains sujets évoqués dans les propositions sont liés ensemble, tels que les deux qui discutent
-        l'éducation des jeunes et celui qui discute l'enseignement. Un regroupement hiérarchique (<em>hierarchical
-            clustering analysis</em> ou HCA) montre la proximité entre les représentations des topics inférés par les
-        algorithmes. On a implementé la méthode Ward pour relever la proximité entre topics.
-    </p>
-
-    <img src="topic_visualisations/hierarchy.png" alt="Hierarchical Clustering of 13 topics." style="width:100%">
-
-    <p>Comme attendu, le regroupement hiérarchique révèle une proximité entre les trois sujets qui appartiennent aux
-        discussions de l'éducation : <kbd>Enseignement & L'EMI</kbd>, <kbd>Formation au secondaire</kbd>, <kbd>Formation
-            au primaire</kbd>. De manière plus surprenante, on observe
-        une proximité dans le regroupement hiérarchique entre la discussion de la désinformation
-        (<kbd>Désinformation</kbd>) et celle autour de l'opinion dans le journalisme (<kbd>L'opinion & le
-            journalisme</kbd>). En outre,
-        la discussion sur la législation (<kbd>Legislation</kbd>) s'avère liée à deux sujets en particulier : dans un
-        premier temps,
-        le regroupement hiérarchique trouve que la législation est liée aux soucis liés aux arnaques et influenceurs
-        en ligne (<kbd>Arnaques & influenceurs</kbd>) ; dans un second temps, elle se lie aussi à la question de la
-        désanoymisation en ligne (<kbd>Désanonymisation en ligne</kbd>).
-    </p>
-
-    <h2>Analyse de la similarité entre topics</h2>
-
-    <p>La similarité cosinus est une autre méthode mathématique pour examiner les relations entre les représentations
-        des topics inférés. Cette méthode prend les représentations de deux topics dans un espace vectoriel et détermine
-        le cosinus de l'angle entre les deux vecteurs. En visualisant sur une matrice les similarités cosinus entre chaque
-        paire de topic, de nouvelles relations ressortent.
-    </p>
-
-    <img src="topic_visualisations/heatmap.png" alt="Heat map showing the cosine similarity between topics."
-        style="width:100%">
-
-    <p>L'idée de législation (<kbd>Legislation</kbd>), par exemple, s'avère ainsi liée plus particulièrement aux
-        propositions relatives à l'éducation
-        dans les écoles secondaires (<kbd>Formation au secondaire</kbd>). Dans une moindre mesure, la législation
-        (<kbd>Legislation</kbd>) se montre également liée aux discussions sur la désinformation et l'accès à
-        l'information (<kbd>Accès à l'information</kbd>).
-        Contrairement au regroupements hierarchiques, l'analyse par la similarité cosinus suggère que la similarité entre
-        les trois topics sur l'éducation n'est pas si forte.
-    </p>
-
-    <h1>Question de recherche 2 : Analyse des profils de vote sur les propositions</h1>
-
-    <p>La seconde question de recherche s'appuie sur les votes qu'ont reçus les propositions. Les données brutes partagées pour
-        l'analyse par Make.org se composent d'une part des propositions et d'autre part d'une matrice des votes identiques sur les
-        propositions. Cette dernière associe les propositions deux à deux en indiquant combien de participants s'étant exprimé sur
-        ces deux propositions ont voté selon chacune des 9 combinaisons possibles de votes pour, contre ou neutre :
-    </p>
-
-    <div>
-        <table>
-            <tr>
-                <th>Proposition A</th>
-                <th>Proposition B</th>
-                <th>Type de vote sur la proposition A</th>
-                <th>Type de vote sur la proposition B</th>
-                <th>Nombre de participants ayant voté ainsi ces 2 propositions</th>
-                <th>Total des participatns ayant voté sur ces 2 propositions</th>
-            </tr>
-            <tr>
-                <td>Il faut depuis l'école primaire...</td>
-                <td>Il faut des chaînes d’informations...</td>
-                <td>pour</td>
-                <td>contre</td>
-                <td>9</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <td>Il faut depuis l'école primaire...</td>
-                <td>Il faut des chaînes d’informations...</td>
-                <td>pour</td>
-                <td>pour</td>
-                <td>24</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <td>Il faut depuis l'école primaire...</td>
-                <td>Il faut des chaînes d’informations...</td>
-                <td>pour</td>
-                <td>neutre</td>
-                <td>6</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <td>Il faut depuis l'école primaire...</td>
-                <td>Il faut des chaînes d’informations...</td>
-                <td>contre</td>
-                <td>pour</td>
-                <td>1</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <td>Il faut depuis l'école primaire...</td>
-                <td>Il faut des chaînes d’informations...</td>
-                <td>neutre</td>
-                <td>pour</td>
-                <td>1</td>
-                <td>41</td>
-            </tr>
-        </table>
-    </div>
-
-    <p>Cette matrice se prête bien à l'analyse de réseau car on peut établir des liens entre les propositions de la
-        consultation en fonction de leur co-soutien ou co-rejet par les participants.
-        Afin d'expérimenter avec cette idée, nous avons examiné les propositions ayant reçu des votes favorables.
-        Pour réaliser cette analyse expérimentale, nous avons créé un réseau dans lequel les différentes propositions
-        constituent les nœuds, reliés entre eux dès lors que des participants ont voté favorablement sur chacune des
-        deux propositions. aux autres propositions votées favorablement par des participants ayant voté favorablement sur
-        lorsqu'au moins un participant. En reprenant l'exemple ci-dessus, les 2 propositions présentées (sur l'école,
-        et sur les chaînes d'information) sont deux nœuds liés entre eux puisque 24 participants les ont voté toutes les
-        deux. Le nombre de participants ayant voté favorablement les deux propositions permet par ailleurs d'établir le
-        poids de ce lien, qui sera utilisé pour alimenter les algorithmes de spatialisation et clusterisation du réseau.
-    </p>
-    <p>En menant cette analyse de réseau, nous cherchons à étudier si des familles de propositions votées favorablement
-        par les mêmes participants pouvaient faire jour et éventuellement si ces familles se recouperaient avec les
-        familles thématiques identifiées précédemment. On pourrait ainsi imaginer, par exemple, qu'un participant votant
-        pour une proposition sur l'opinion et le journalisme voterait également en faveur d'une proposition sur l'éthique
-        du journalisme. Les résultats de cette analyse expérimentale n'ont cependant pas confirmé cette hypothèse. Ils
-        tendent au contraire plutôt à montrer que les clusters de participants ayant voté ensemble de mêmes propositions se
-        répartissent de manière assez héterogène les différents sujets traités. Cependant comme nous le verrons, il est
-        fort probable que ces résultats soient faussés par la nature des données et qu'ils ne reflètent en réalité que la
-        méthodologie de présentation des propositions à voter aux participants par la plateforme de Make.org.
-    </p>
     <p>
-        TODO KC: ajouter un paragraphe méthodologique sur le filtrage du réseau
+      La seconde question de recherche s'appuie sur les votes qu'ont reçus les
+      propositions. Les données brutes partagées pour l'analyse par Make.org se
+      composent d'une part des propositions et d'autre part d'une matrice des
+      votes identiques sur les propositions. Cette dernière associe les
+      propositions deux à deux en indiquant combien de participants s'étant
+      exprimé sur ces deux propositions ont voté selon chacune des 9
+      combinaisons possibles de votes pour, contre ou neutre :
     </p>
 
-    <h2>Recoupement de l'accord sur les propositions et des topics</h2>
-
     <div>
-        <table>
-            <tr>
-                <th>Couleur</th>
-                <th>Topic</th>
-            </tr>
-            <tr>
-                <td style="background-color: #6b7f38 ; padding: 10px;"></td>
-                <td>L'opinion & le journalisme</td>
-            </tr>
-            <tr>
-                <td style="background-color: #7d64d1 ; padding: 10px;"></td>
-                <td>Financement & indépendance des médias</td>
-            </tr>
-            <tr>
-                <td style="background-color: #5fb651 ; padding: 10px;"></td>
-                <td>Désinformation</td>
-            </tr>
-            <tr>
-                <td style="background-color: #c352b3 ; padding: 10px;"></td>
-                <td>Formation au secondaire</td>
-            </tr>
-            <tr>
-                <td style="background-color: #b3b540 ; padding: 10px;"></td>
-                <td>Formation au primaire</td>
-            </tr>
-            <tr>
-                <td style="background-color: #7e7cc6 ; padding: 10px;"></td>
-                <td>Accès à l'information</td>
-            </tr>
-            <tr>
-                <td style="background-color: #c58c44 ; padding: 10px;"></td>
-                <td>Chaînes d'information en continu</td>
-            </tr>
-            <tr>
-                <td style="background-color: #509dd4 ; padding: 10px;"></td>
-                <td>Législation</td>
-            </tr>
-            <tr>
-                <td style="background-color: #c75832 ; padding: 10px;"></td>
-                <td>Éthique du journalisme</td>
-            </tr>
-            <tr>
-                <td style="background-color: #4baf91 ; padding: 10px;"></td>
-                <td>Désanoymisation en ligne</td>
-            </tr>
-            <tr>
-                <td style="background-color: #d44c62 ; padding: 10px;"></td>
-                <td>Arnaques & influenceurs</td>
-            </tr>
-            <tr>
-                <td style="background-color: #de85b0 ; padding: 10px;"></td>
-                <td>Échelles des médias</td>
-            </tr>
-            <tr>
-                <td style="background-color: #a0486c ; padding: 10px;"></td>
-                <td>Enseignement & l'EMI</td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <th>Proposition A</th>
+          <th>Proposition B</th>
+          <th>Type de vote sur la proposition A</th>
+          <th>Type de vote sur la proposition B</th>
+          <th>Nombre de participants ayant voté ainsi ces 2 propositions</th>
+          <th>Total des participatns ayant voté sur ces 2 propositions</th>
+        </tr>
+        <tr>
+          <td>Il faut depuis l'école primaire...</td>
+          <td>Il faut des chaînes d’informations...</td>
+          <td>pour</td>
+          <td>contre</td>
+          <td>9</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Il faut depuis l'école primaire...</td>
+          <td>Il faut des chaînes d’informations...</td>
+          <td>pour</td>
+          <td>pour</td>
+          <td>24</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Il faut depuis l'école primaire...</td>
+          <td>Il faut des chaînes d’informations...</td>
+          <td>pour</td>
+          <td>neutre</td>
+          <td>6</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Il faut depuis l'école primaire...</td>
+          <td>Il faut des chaînes d’informations...</td>
+          <td>contre</td>
+          <td>pour</td>
+          <td>1</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Il faut depuis l'école primaire...</td>
+          <td>Il faut des chaînes d’informations...</td>
+          <td>neutre</td>
+          <td>pour</td>
+          <td>1</td>
+          <td>41</td>
+        </tr>
+      </table>
     </div>
-
-    <img src="graph_visualisations/agreement_clusters_by_topic.png"
-        alt="Clusters of propositions which received affirmative votes, colored by the proposition's topic."
-        style="width:100%">
 
     <p>
-        En projetant les topics de la précédente analyse sur chaque proposition via des couleurs, on peut essayer
-        ci-dessous d'identifier si les clusters formés par le co-soutien à des propositions se recoupent avec les
-        sujets traités par chacune des propositions. Mais l'héterogénéïté très forte des couleurs au sein des clusters
-        du réseau semble indiquer très clairement que ce n'est pas le cas.
+      Cette matrice se prête bien à l'analyse de réseau car on peut établir des
+      liens entre les propositions de la consultation en fonction de leur
+      co-soutien ou co-rejet par les participants. Afin d'expérimenter avec
+      cette idée, nous avons examiné les propositions ayant reçu des votes
+      favorables. Pour réaliser cette analyse expérimentale, nous avons créé un
+      réseau dans lequel les différentes propositions constituent les nœuds,
+      reliés entre eux dès lors que des participants ont voté favorablement sur
+      chacune des deux propositions. aux autres propositions votées
+      favorablement par des participants ayant voté favorablement sur lorsqu'au
+      moins un participant. En reprenant l'exemple ci-dessus, les 2 propositions
+      présentées (sur l'école, et sur les chaînes d'information) sont deux nœuds
+      liés entre eux puisque 24 participants les ont voté toutes les deux. Le
+      nombre de participants ayant voté favorablement les deux propositions
+      permet par ailleurs d'établir le poids de ce lien, qui sera utilisé pour
+      alimenter les algorithmes de spatialisation et clusterisation du réseau.
     </p>
     <p>
-        Il est cependant difficile de tirer une conclusion définitive car la méthodologie de la consultation influe
-        très probablement fortement sur cette analyse de réseau. En effet, kors du déroulement de la consultation entre
-        juin et octobre 2022, le fonctionnement de la plateforme Make.org vise à essayer autant que possible que l'ensemble
-        des propositions soit évalué par un échantillon semblable de participants. Ainsi, lorsqu'une nouvelle proposition
-        est formulée par un participant, celle-ci n'a encore aucun vote et elle va être présentée prioritairement aux futurs
-        participants afin d'équilibrer le nombre de votes entre les différentes propositions. En conséquence, les propositions
-        ont tendance à être présentées aux utilisateurs par paquets chronologiques, ce qui influe logiquement sur l'analyse de
-        réseau réalisée à partir du vote d'un ensemble propositions par chaque utilisateur.
-        À défaut de disposer de la date à laquelle chaque propositon a été formulée, notre analyse de réseau risque en
-        conséquence de refléter avant tout l'historique temporel des propositions formulées.
+      En menant cette analyse de réseau, nous cherchons à étudier si des
+      familles de propositions votées favorablement par les mêmes participants
+      pouvaient faire jour et éventuellement si ces familles se recouperaient
+      avec les familles thématiques identifiées précédemment. On pourrait ainsi
+      imaginer, par exemple, qu'un participant votant pour une proposition sur
+      l'opinion et le journalisme voterait également en faveur d'une proposition
+      sur l'éthique du journalisme. Les résultats de cette analyse expérimentale
+      n'ont cependant pas confirmé cette hypothèse. Ils tendent au contraire
+      plutôt à montrer que les clusters de participants ayant voté ensemble de
+      mêmes propositions se répartissent de manière assez héterogène les
+      différents sujets traités. Cependant comme nous le verrons, il est fort
+      probable que ces résultats soient faussés par la nature des données et
+      qu'ils ne reflètent en réalité que la méthodologie de présentation des
+      propositions à voter aux participants par la plateforme de Make.org.
+    </p>
+    <p>
+      TODO KC: ajouter un paragraphe méthodologique sur le filtrage du réseau
     </p>
 
-    <h2>Recoupement de l'accord sur les propositions et de l'âge de leurs auteurs</h2>
+    <h3>Recoupement de l'accord sur les propositions et des topics</h3>
 
-    <p>Afin de mieux explorer cette seconde hypothèse, nous avons tenté d'examiner le même réseau au prisme de l'âge des
-        auteurs de chaque proposition, projeté sous la forme d'un dégradé de couleur du jaune pour les contributeurs les
-        plus jeunes, au bleu pour ceux les plus âgés. Alors que la projection des topics ne révélait aucune cohérence avec
-        les clusters du réseau, cette nouvelle projection semble plus clairement indiquer des clusters majoritairement
-        composés de propositions soumises par des personnes plutôt jeunes, et d'autres par des participants plus âgés.
-        Vu au prisme préalablement évoqué de la méthodolodie de consultation, cette projection semble pouvoir indiquer
-        une participation à la consultation par vagues d'utilisateurs regroupés en générations, ce qui pourrait s'expliquer
-        par la communication organisée autour de la consultation, ayant amené des groupes de lycéens et étudiants à contribuer
-        à des périodes précises, tandis que les publics plus âgés par exemple lecteurs de la Presse Quotidienne Régionale
-        auraient été concentrés à d'autres périodes en fonction de la mise en avant de la consultation sur les sites webs de
-        ces médias à ces périodes.
+    <div>
+      <table>
+        <tr>
+          <th>Couleur</th>
+          <th>Topic</th>
+        </tr>
+        <tr>
+          <td style="background-color: #6b7f38; padding: 10px"></td>
+          <td>L'opinion & le journalisme</td>
+        </tr>
+        <tr>
+          <td style="background-color: #7d64d1; padding: 10px"></td>
+          <td>Financement & indépendance des médias</td>
+        </tr>
+        <tr>
+          <td style="background-color: #5fb651; padding: 10px"></td>
+          <td>Désinformation</td>
+        </tr>
+        <tr>
+          <td style="background-color: #c352b3; padding: 10px"></td>
+          <td>Formation au secondaire</td>
+        </tr>
+        <tr>
+          <td style="background-color: #b3b540; padding: 10px"></td>
+          <td>Formation au primaire</td>
+        </tr>
+        <tr>
+          <td style="background-color: #7e7cc6; padding: 10px"></td>
+          <td>Accès à l'information</td>
+        </tr>
+        <tr>
+          <td style="background-color: #c58c44; padding: 10px"></td>
+          <td>Chaînes d'information en continu</td>
+        </tr>
+        <tr>
+          <td style="background-color: #509dd4; padding: 10px"></td>
+          <td>Législation</td>
+        </tr>
+        <tr>
+          <td style="background-color: #c75832; padding: 10px"></td>
+          <td>Éthique du journalisme</td>
+        </tr>
+        <tr>
+          <td style="background-color: #4baf91; padding: 10px"></td>
+          <td>Désanoymisation en ligne</td>
+        </tr>
+        <tr>
+          <td style="background-color: #d44c62; padding: 10px"></td>
+          <td>Arnaques & influenceurs</td>
+        </tr>
+        <tr>
+          <td style="background-color: #de85b0; padding: 10px"></td>
+          <td>Échelles des médias</td>
+        </tr>
+        <tr>
+          <td style="background-color: #a0486c; padding: 10px"></td>
+          <td>Enseignement & l'EMI</td>
+        </tr>
+      </table>
+    </div>
+
+    <img
+      src="graph_visualisations/agreement_clusters_by_topic.png"
+      alt="Clusters of propositions which received affirmative votes, colored by the proposition's topic."
+      style="width: 100%"
+    />
+
+    <p>
+      En projetant les topics de la précédente analyse sur chaque proposition
+      via des couleurs, on peut essayer ci-dessous d'identifier si les clusters
+      formés par le co-soutien à des propositions se recoupent avec les sujets
+      traités par chacune des propositions. Mais l'héterogénéïté très forte des
+      couleurs au sein des clusters du réseau semble indiquer très clairement
+      que ce n'est pas le cas.
+    </p>
+    <p>
+      Il est cependant difficile de tirer une conclusion définitive car la
+      méthodologie de la consultation influe très probablement fortement sur
+      cette analyse de réseau. En effet, lors du déroulement de la consultation
+      entre juin et octobre 2022, le fonctionnement de la plateforme Make.org
+      vise à essayer autant que possible que l'ensemble des propositions soit
+      évalué par un échantillon semblable de participants. Ainsi, lorsqu'une
+      nouvelle proposition est formulée par un participant, celle-ci n'a encore
+      aucun vote et elle va être présentée prioritairement aux futurs
+      participants afin d'équilibrer le nombre de votes entre les différentes
+      propositions. En conséquence, les propositions ont tendance à être
+      présentées aux utilisateurs par paquets chronologiques, ce qui influe
+      logiquement sur l'analyse de réseau réalisée à partir du vote d'un
+      ensemble propositions par chaque utilisateur. À défaut de disposer de la
+      date à laquelle chaque propositon a été formulée, notre analyse de réseau
+      risque en conséquence de refléter avant tout l'historique temporel des
+      propositions formulées.
+    </p>
+
+    <h3>
+      Recoupement de l'accord sur les propositions et de l'âge de leurs auteurs
+    </h3>
+
+    <p>
+      Afin de mieux explorer cette seconde hypothèse, nous avons tenté
+      d'examiner le même réseau au prisme de l'âge des auteurs de chaque
+      proposition, projeté sous la forme d'un dégradé de couleur du jaune pour
+      les contributeurs les plus jeunes, au bleu pour ceux les plus âgés. Alors
+      que la projection des topics ne révélait aucune cohérence avec les
+      clusters du réseau, cette nouvelle projection semble plus clairement
+      indiquer des clusters majoritairement composés de propositions soumises
+      par des personnes plutôt jeunes, et d'autres par des participants plus
+      âgés. Vu au prisme préalablement évoqué de la méthodolodie de
+      consultation, cette projection semble pouvoir indiquer une participation à
+      la consultation par vagues d'utilisateurs regroupés en générations, ce qui
+      pourrait s'expliquer par la communication organisée autour de la
+      consultation, ayant amené des groupes de lycéens et étudiants à contribuer
+      à des périodes précises, tandis que les publics plus âgés par exemple
+      lecteurs de la Presse Quotidienne Régionale auraient été concentrés à
+      d'autres périodes en fonction de la mise en avant de la consultation sur
+      les sites webs de ces médias à ces périodes.
     </p>
 
     <div>
-        <table>
-            <tr>
-                <td style="background-color: #ffff00 ; padding: 10px;"></td>
-                <td>Propositions formulées par les participants les plus jeunes</td>
-            </tr>
-            <tr>
-                <td style="background-color: #0000ff ; padding: 10px;"></td>
-                <td>Propositions formulées par les participants les plus âgés</td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <td style="background-color: #ffff00; padding: 10px"></td>
+          <td>Propositions formulées par les participants les plus jeunes</td>
+        </tr>
+        <tr>
+          <td style="background-color: #0000ff; padding: 10px"></td>
+          <td>Propositions formulées par les participants les plus âgés</td>
+        </tr>
+      </table>
     </div>
 
-    <img src="graph_visualisations/agreement_clusters_by_age.png"
-        alt="Clusters of propositions which recieved affirmative votes, colored by the age of the proposition's author."
-        style="width:100%">
+    <img
+      src="graph_visualisations/agreement_clusters_by_age.png"
+      alt="Clusters of propositions which recieved affirmative votes, colored by the age of the proposition's author."
+      style="width: 100%"
+    />
 
-    <h1>Conclusion</h1>
+    <h2>Conclusion</h2>
 
-    <p>En conclusion, l'analyse de <em>topic modeling</em> a permis de compléter l'analyse réalisée par Make.org en
-        identifiant automatiquement une quinzaine de sujets évoqués au travers de l'ensemble des 1723 propositions
-        valides de la consultation. <b>La décomposition des sujets suggère leur importance
-        dans l'imaginaire des français @KC: je ne comprends pas ce que tu veux dire avec cette phrase</b>.
-        Les sujets manifestement les plus importants pour les participants à la Consultation autour de la question de
-        comment mieux s'informer, semblent concentrés autour de l'opinion dans le journalisme, le financement des médias,
-        la désinformation, et l'éducation en secondaire.
-        L'analyse de la similarité entre les sujets révèle par ailleurs des liens importants entre plusieurs de ces
-        thématiques.
-        En revanche, l'analyse de réseau ne s'est pas révélée très concluante et semble surtout avoir reflété la
-        méthodologie de consultation de la plateforme Make.org plutôt que les pratiques de vote des participants.
-        Pour prolonger ces travaux, une piste intéressante pourrait être d'enrichir les données sur les propositions
-        avec les dates du début et de la fin de la présentation de chaque proposition aux participants votants.
+    <p>
+      En conclusion, l'analyse de <em>topic modeling</em> a permis de compléter
+      l'analyse réalisée par Make.org en identifiant automatiquement une
+      quinzaine de sujets évoqués au travers de l'ensemble des 1723 propositions
+      valides de la consultation. La décomposition des sujets inférés suggère
+      leur importance aux participants, telle que la prépondérance de l'école
+      sécondaire par rapport à la formation en primaire. Les sujets
+      manifestement les plus importants pour les participants à la Consultation
+      autour de la question de comment mieux s'informer, semblent concentrés
+      autour de l'opinion dans le journalisme, le financement des médias, la
+      désinformation, et l'éducation en secondaire. L'analyse de la similarité
+      entre les sujets révèle par ailleurs des liens importants entre plusieurs
+      de ces thématiques. En revanche, l'analyse de réseau ne s'est pas révélée
+      très concluante et semble surtout avoir reflété la méthodologie de
+      consultation de la plateforme Make.org plutôt que les pratiques de vote
+      des participants. Pour prolonger ces travaux, une piste intéressante
+      pourrait être d'enrichir les données sur les propositions avec les dates
+      du début et de la fin de la présentation de chaque proposition aux
+      participants votants.
     </p>
 
     <div>
-        <p id="footnote-1"><sup>1</sup> Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y. Romary, L. de la
-            Clergerie,
-            E., Seddah, D., Sagot, B. (2020) CamemBERT: a Tasty French Language Model. <em>Proceedings of the 58th
-                Annual Meeting of the Association for Computational Linguistics</em>.</p>
-        <p id="footnote-2"><sup>2</sup> Berriche, M. (Forthcoming). Back to school. Do teenagers receive and share
-            (false)
-            information in all situations? <em>Les enjeux de l'information ou de la communication</em>.</p>
+      <p id="footnote-1">
+        <sup>1</sup> Martin, L., Muller, B., Suárez, O., Javier, P., Dupont, Y.
+        Romary, L. de la Clergerie, E., Seddah, D., Sagot, B. (2020) CamemBERT:
+        a Tasty French Language Model.
+        <em
+          >Proceedings of the 58th Annual Meeting of the Association for
+          Computational Linguistics</em
+        >.
+      </p>
+      <p id="footnote-2">
+        <sup>2</sup> Berriche, M. (Forthcoming). Back to school. Do teenagers
+        receive and share (false) information in all situations?
+        <em>Les enjeux de l'information ou de la communication</em>.
+      </p>
     </div>
-
-</body>
-
+  </body>
 </html>
