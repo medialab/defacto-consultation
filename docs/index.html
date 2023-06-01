@@ -82,6 +82,7 @@
       id="makeOrgs_topics"
       title="Topics infered by Make.Org consultation"
       src="https://medialab.github.io/defacto-consultation/tables/makeOrg_topics.html"
+      width="100%"
     ></iframe>
 
     <h3>Topics inférés par l'analyse du médialab</h3>
@@ -141,8 +142,8 @@
       id="barchart"
       title="Bar charts of 13 topics, showing the most representative tokens"
       src="https://medialab.github.io/defacto-consultation/topic_visualisations/barchart.html"
-      height="100%"
-      width="100%"
+      onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+      style="height: 200px; width: 100%; border: none; overflow: hidden"
     ></iframe>
 
     <p>
